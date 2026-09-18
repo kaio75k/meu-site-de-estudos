@@ -5,391 +5,5301 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#e53935">
 <title>InspiRED</title>
+
 <style>
-:root{--red:#e53935;--red2:#ff625e;--bg:#fff5f4;--card:#fff;--text:#1c1315;--muted:#9a6360;--line:#f4d6d3;--soft:#ffece8;--redsoft:#ffdcd7;--shadow:0 20px 60px rgba(229,57,53,.14)}
-body.dark{--bg:#190f10;--card:#231517;--text:#f7eeee;--muted:#c99a97;--line:#3d2224;--soft:#2c1719;--redsoft:#3d1e1d;--shadow:0 20px 60px rgba(0,0,0,.35)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}.container{width:min(1120px,calc(100% - 32px));margin:auto}
-header{height:72px;position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:100%;display:flex;align-items:center;gap:12px}.logo{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:900;color:var(--red)}.logoMark{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--red),#b91c1c);display:grid;place-items:center;color:#fff;font-weight:900;font-size:21px;box-shadow:0 9px 24px rgba(229,57,53,.22)}.navlinks{display:flex;gap:24px;margin-left:28px;color:var(--muted);font-size:14px;font-weight:750}.navlinks a:hover{color:var(--red)}.navRight{margin-left:auto;display:flex;gap:8px;align-items:center}.icon{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--red)}.accountBtn{height:42px;padding:0 15px;border-radius:12px;border:0;background:var(--red);color:white;font-weight:850}
+:root{
+  --red:#e53935;
+  --red2:#ff625e;
+  --bg:#fff5f4;
+  --card:#fff;
+  --text:#1c1315;
+  --muted:#9a6360;
+  --line:#f4d6d3;
+  --soft:#ffece8;
+  --redsoft:#ffdcd7;
+  --shadow:0 20px 60px rgba(229,57,53,.14)
+}
+
+body.dark{
+  --bg:#190f10;
+  --card:#231517;
+  --text:#f7eeee;
+  --muted:#c99a97;
+  --line:#3d2224;
+  --soft:#2c1719;
+  --redsoft:#3d1e1d;
+  --shadow:0 20px 60px rgba(0,0,0,.35)
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+}
+
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+
+.container{
+  width:min(1120px,calc(100% - 32px));
+  margin:auto
+}
+
+header{
+  height:72px;
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:color-mix(in srgb,var(--card) 90%,transparent);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line)
+}
+
+.nav{
+  height:100%;
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:20px;
+  font-weight:900;
+  color:var(--red)
+}
+
+.logoMark{
+  width:43px;
+  height:43px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--red),#b91c1c);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:900;
+  font-size:21px;
+  box-shadow:0 9px 24px rgba(229,57,53,.22)
+}
+
+.navlinks{
+  display:flex;
+  gap:24px;
+  margin-left:28px;
+  color:var(--muted);
+  font-size:14px;
+  font-weight:750
+}
+
+.navlinks a:hover{color:var(--red)}
+
+.navRight{
+  margin-left:auto;
+  display:flex;
+  gap:8px;
+  align-items:center
+}
+
+.icon{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--red)
+}
+
+.accountBtn{
+  height:42px;
+  padding:0 15px;
+  border-radius:12px;
+  border:0;
+  background:var(--red);
+  color:white;
+  font-weight:850
+}
+
 /* landing */
-.landing{min-height:calc(100vh - 72px);display:flex;align-items:center;padding:50px 0;background:radial-gradient(circle at 78% 28%,rgba(229,57,53,.24),transparent 45%),linear-gradient(180deg,var(--card),var(--bg))}.landingGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}.eyebrow{color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:2px;font-size:12px}.landing h1{font-size:clamp(48px,6vw,78px);line-height:.97;letter-spacing:-4px;margin:17px 0 23px}.landing h1 span{color:var(--red)}.landing p{font-size:19px;line-height:1.65;color:var(--muted);max-width:650px}.landingActions{display:flex;gap:10px;margin-top:28px}.btn{border:0;border-radius:14px;padding:14px 19px;font-weight:850;transition:.18s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--red);color:#fff;box-shadow:0 12px 30px rgba(229,57,53,.22)}.secondary{background:var(--soft);color:var(--red);border:1px solid var(--line)}.secondary:hover{background:var(--redsoft)}.landingCard{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow)}.fakeLogo{width:68px;height:68px;border-radius:22px;background:var(--redsoft);display:grid;place-items:center;font-size:30px;margin-bottom:25px}.landingCard h2{font-size:27px;margin:0 0 8px}.landingCard p{font-size:15px;margin:0;color:var(--muted)}.lineItem{display:flex;gap:12px;align-items:center;margin-top:20px;padding:15px;border-radius:16px;background:var(--soft)}.dot{width:36px;height:36px;border-radius:11px;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:900}.lineItem b{display:block}.lineItem span{font-size:12px;color:var(--muted)}
+
+.landing{
+  min-height:calc(100vh - 72px);
+  display:flex;
+  align-items:center;
+  padding:50px 0;
+  background:
+    radial-gradient(circle at 78% 28%,rgba(229,57,53,.24),transparent 45%),
+    linear-gradient(180deg,var(--card),var(--bg))
+}
+
+.landingGrid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:70px;
+  align-items:center
+}
+
+.eyebrow{
+  color:var(--red);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px
+}
+
+.landing h1{
+  font-size:clamp(48px,6vw,78px);
+  line-height:.97;
+  letter-spacing:-4px;
+  margin:17px 0 23px
+}
+
+.landing h1 span{color:var(--red)}
+
+.landing p{
+  font-size:19px;
+  line-height:1.65;
+  color:var(--muted);
+  max-width:650px
+}
+
+.landingActions{
+  display:flex;
+  gap:10px;
+  margin-top:28px
+}
+
+.btn{
+  border:0;
+  border-radius:14px;
+  padding:14px 19px;
+  font-weight:850;
+  transition:.18s
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+.primary{
+  background:var(--red);
+  color:#fff;
+  box-shadow:0 12px 30px rgba(229,57,53,.22)
+}
+
+.secondary{
+  background:var(--soft);
+  color:var(--red);
+  border:1px solid var(--line)
+}
+
+.secondary:hover{background:var(--redsoft)}
+
+.landingCard{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:26px;
+  box-shadow:var(--shadow)
+}
+
+.fakeLogo{
+  width:68px;
+  height:68px;
+  border-radius:22px;
+  background:var(--redsoft);
+  display:grid;
+  place-items:center;
+  font-size:30px;
+  margin-bottom:25px
+}
+
+.landingCard h2{
+  font-size:27px;
+  margin:0 0 8px
+}
+
+.landingCard p{
+  font-size:15px;
+  margin:0;
+  color:var(--muted)
+}
+
+.lineItem{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-top:20px;
+  padding:15px;
+  border-radius:16px;
+  background:var(--soft)
+}
+
+.dot{
+  width:36px;
+  height:36px;
+  border-radius:11px;
+  background:var(--red);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-weight:900
+}
+
+.lineItem b{display:block}
+
+.lineItem span{
+  font-size:12px;
+  color:var(--muted)
+}
+
 /* app */
-.app{display:none}.heroApp{padding:54px 0 30px;background:linear-gradient(180deg,var(--card),var(--bg))}.welcome{font-size:14px;color:var(--muted)}.welcome strong{color:var(--text)}.app h1{font-size:48px;letter-spacing:-2.5px;margin:9px 0 10px}.appLead{color:var(--muted);font-size:17px;max-width:680px;line-height:1.6}.section{padding:36px 0}.sectionTitle{margin-bottom:18px}.sectionTitle .eyebrow{margin-bottom:7px}.sectionTitle h2{font-size:32px;letter-spacing:-1.3px;margin:0}.sectionTitle p{color:var(--muted);margin:7px 0 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}.stat .n{font-size:31px;font-weight:900;color:var(--red)}.stat .l{color:var(--muted);font-size:12px;margin-top:4px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 28px rgba(229,57,53,.05)}.empty{border:1px dashed var(--line);box-shadow:none;text-align:center;padding:36px;color:var(--muted)}.emptyIcon{font-size:30px;margin-bottom:8px}.subject{min-height:215px;display:flex;flex-direction:column}.subjectIcon{width:53px;height:53px;border-radius:16px;background:var(--redsoft);display:grid;place-items:center;color:var(--red);font-weight:900;font-size:23px;margin-bottom:22px}.subject h3{margin:0 0 8px;font-size:20px}.subject p{color:var(--muted);line-height:1.5;margin:0}.subject button{margin-top:auto;align-self:flex-start;background:none;border:0;color:var(--red);font-weight:850;padding:18px 0 0}
+
+.app{display:none}
+
+.heroApp{
+  padding:54px 0 30px;
+  background:linear-gradient(180deg,var(--card),var(--bg))
+}
+
+.welcome{
+  font-size:14px;
+  color:var(--muted)
+}
+
+.welcome strong{color:var(--text)}
+
+.app h1{
+  font-size:48px;
+  letter-spacing:-2.5px;
+  margin:9px 0 10px
+}
+
+.appLead{
+  color:var(--muted);
+  font-size:17px;
+  max-width:680px;
+  line-height:1.6
+}
+
+.section{padding:36px 0}
+
+.sectionTitle{margin-bottom:18px}
+
+.sectionTitle .eyebrow{margin-bottom:7px}
+
+.sectionTitle h2{
+  font-size:32px;
+  letter-spacing:-1.3px;
+  margin:0
+}
+
+.sectionTitle p{
+  color:var(--muted);
+  margin:7px 0 0
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px
+}
+
+.stat{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:20px
+}
+
+.stat .n{
+  font-size:31px;
+  font-weight:900;
+  color:var(--red)
+}
+
+.stat .l{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px
+}
+
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 8px 28px rgba(229,57,53,.05)
+}
+
+.empty{
+  border:1px dashed var(--line);
+  box-shadow:none;
+  text-align:center;
+  padding:36px;
+  color:var(--muted)
+}
+
+.emptyIcon{
+  font-size:30px;
+  margin-bottom:8px
+}
+
+.subject{
+  min-height:215px;
+  display:flex;
+  flex-direction:column
+}
+
+.subjectIcon{
+  width:53px;
+  height:53px;
+  border-radius:16px;
+  background:var(--redsoft);
+  display:grid;
+  place-items:center;
+  color:var(--red);
+  font-weight:900;
+  font-size:23px;
+  margin-bottom:22px
+}
+
+.subject h3{
+  margin:0 0 8px;
+  font-size:20px
+}
+
+.subject p{
+  color:var(--muted);
+  line-height:1.5;
+  margin:0
+}
+
+.subject button{
+  margin-top:auto;
+  align-self:flex-start;
+  background:none;
+  border:0;
+  color:var(--red);
+  font-weight:850;
+  padding:18px 0 0
+}
+
 /* AI */
-.aiWrap{display:grid;grid-template-columns:250px 1fr;min-height:560px;padding:0;overflow:hidden}.aiSide{border-right:1px solid var(--line);padding:18px}.aiSide h3{margin:4px 0 4px}.aiSide p{font-size:12px;color:var(--muted);line-height:1.5}.contextBox{padding:13px;border-radius:14px;background:var(--redsoft);margin:15px 0}.contextBox small{color:var(--muted)}.contextBox b{display:block;margin-top:4px}.promptBtn{width:100%;padding:12px;text-align:left;border:0;border-radius:11px;background:transparent;color:var(--muted);font-weight:700}.promptBtn:hover{background:var(--soft);color:var(--red)}.aiMain{display:flex;flex-direction:column;min-width:0}.aiHead{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}.online{color:#2e9d5b;font-size:12px;font-weight:800}.messages{padding:22px;display:flex;flex-direction:column;gap:13px;flex:1;overflow:auto}.msg{max-width:82%;padding:13px 16px;border-radius:17px;line-height:1.55}.msg .md-h1,.msg .md-h2,.msg .md-h3{margin:4px 0 10px;line-height:1.2;letter-spacing:-.4px}.msg .md-h1{font-size:27px;font-weight:900}.msg .md-h2{font-size:22px;font-weight:900}.msg .md-h3{font-size:18px;font-weight:850}.msg .md-p{margin:0 0 8px}.msg .md-p:last-child{margin-bottom:0}.msg ul,.msg ol{margin:6px 0 10px;padding-left:24px}.msg li{margin:4px 0}.msg blockquote{margin:8px 0;padding:9px 13px;border-left:4px solid var(--red);background:var(--redsoft);border-radius:8px;color:var(--text)}.msg hr{border:0;border-top:1px solid var(--line);margin:12px 0}.msg code{background:rgba(127,127,127,.14);padding:2px 5px;border-radius:5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}.msg pre{margin:8px 0;padding:12px;overflow:auto;background:rgba(0,0,0,.08);border-radius:10px;white-space:pre-wrap}.msg pre code{background:none;padding:0}.userMsg blockquote{background:rgba(255,255,255,.14);color:#fff;border-left-color:#fff}.userMsg code{background:rgba(255,255,255,.16)}.aiMsg{background:var(--soft);align-self:flex-start}.userMsg{background:var(--red);color:#fff;align-self:flex-end}.typing{opacity:.6}.aiInput{display:flex;gap:9px;padding:15px;border-top:1px solid var(--line)}.aiInput input{flex:1;min-width:0;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:13px;padding:13px;outline:none}.aiInput input:focus{border-color:var(--red)}
+
+.aiWrap{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  min-height:560px;
+  padding:0;
+  overflow:hidden
+}
+
+.aiSide{
+  border-right:1px solid var(--line);
+  padding:18px
+}
+
+.aiSide h3{margin:4px 0}
+
+.aiSide p{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.5
+}
+
+.contextBox{
+  padding:13px;
+  border-radius:14px;
+  background:var(--redsoft);
+  margin:15px 0
+}
+
+.contextBox small{color:var(--muted)}
+
+.contextBox b{
+  display:block;
+  margin-top:4px
+}
+
+.promptBtn{
+  width:100%;
+  padding:12px;
+  text-align:left;
+  border:0;
+  border-radius:11px;
+  background:transparent;
+  color:var(--muted);
+  font-weight:700
+}
+
+.promptBtn:hover{
+  background:var(--soft);
+  color:var(--red)
+}
+
+.aiMain{
+  display:flex;
+  flex-direction:column;
+  min-width:0
+}
+
+.aiHead{
+  padding:18px 20px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:10px
+}
+
+.online{
+  color:#2e9d5b;
+  font-size:12px;
+  font-weight:800
+}
+
+.messages{
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  gap:13px;
+  flex:1;
+  overflow:auto
+}
+
+.msg{
+  max-width:82%;
+  padding:13px 16px;
+  border-radius:17px;
+  line-height:1.55
+}
+
+.msg .md-h1,
+.msg .md-h2,
+.msg .md-h3{
+  margin:4px 0 10px;
+  line-height:1.2;
+  letter-spacing:-.4px
+}
+
+.msg .md-h1{
+  font-size:27px;
+  font-weight:900
+}
+
+.msg .md-h2{
+  font-size:22px;
+  font-weight:900
+}
+
+.msg .md-h3{
+  font-size:18px;
+  font-weight:850
+}
+
+.msg .md-p{margin:0 0 8px}
+.msg .md-p:last-child{margin-bottom:0}
+
+.msg ul,
+.msg ol{
+  margin:6px 0 10px;
+  padding-left:24px
+}
+
+.msg li{margin:4px 0}
+
+.msg blockquote{
+  margin:8px 0;
+  padding:9px 13px;
+  border-left:4px solid var(--red);
+  background:var(--redsoft);
+  border-radius:8px;
+  color:var(--text)
+}
+
+.msg hr{
+  border:0;
+  border-top:1px solid var(--line);
+  margin:12px 0
+}
+
+.msg code{
+  background:rgba(127,127,127,.14);
+  padding:2px 5px;
+  border-radius:5px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.92em
+}
+
+.msg pre{
+  margin:8px 0;
+  padding:12px;
+  overflow:auto;
+  background:rgba(0,0,0,.08);
+  border-radius:10px;
+  white-space:pre-wrap
+}
+
+.msg pre code{
+  background:none;
+  padding:0
+}
+
+.userMsg blockquote{
+  background:rgba(255,255,255,.14);
+  color:#fff;
+  border-left-color:#fff
+}
+
+.userMsg code{background:rgba(255,255,255,.16)}
+
+.aiMsg{
+  background:var(--soft);
+  align-self:flex-start
+}
+
+.userMsg{
+  background:var(--red);
+  color:#fff;
+  align-self:flex-end
+}
+
+.typing{opacity:.6}
+
+.aiInput{
+  display:flex;
+  gap:9px;
+  padding:15px;
+  border-top:1px solid var(--line)
+}
+
+.aiInput input{
+  flex:1;
+  min-width:0;
+  background:var(--bg);
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:13px;
+  outline:none
+}
+
+.aiInput input:focus{border-color:var(--red)}
+
 /* games */
-.gameGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.game{min-height:220px}.gameIcon{font-size:26px;width:54px;height:54px;border-radius:16px;background:var(--redsoft);display:grid;place-items:center;margin-bottom:6px}.game h3{margin:13px 0 6px}.game p{color:var(--muted);line-height:1.5;font-size:14px}.game .btn{margin-top:12px}.game.locked{opacity:.72}
+
+.gameGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px
+}
+
+.game{min-height:220px}
+
+.gameIcon{
+  font-size:26px;
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  background:var(--redsoft);
+  display:grid;
+  place-items:center;
+  margin-bottom:6px
+}
+
+.game h3{margin:13px 0 6px}
+
+.game p{
+  color:var(--muted);
+  line-height:1.5;
+  font-size:14px
+}
+
+.game .btn{margin-top:12px}
+.game.locked{opacity:.72}
+
 /* school */
-.schoolPanel{display:grid;grid-template-columns:1fr 1fr;gap:15px}.searchRow{display:flex;gap:9px}.input,.select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);outline:none}.schoolResults{display:grid;gap:8px;margin-top:13px;max-height:360px;overflow:auto}.schoolResult{display:flex;gap:12px;align-items:center;padding:13px;border:1px solid var(--line);border-radius:14px;background:var(--card);cursor:pointer}.schoolResult:hover{border-color:var(--red)}.schoolResult .si{width:42px;height:42px;border-radius:11px;background:var(--redsoft);display:grid;place-items:center}.schoolResult main{flex:1}.schoolResult b{display:block}.schoolResult small{color:var(--muted)}.distance{color:var(--red);font-size:11px;font-weight:900}.curriculum{margin-top:13px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{background:var(--soft);padding:8px 10px;border-radius:9px;color:var(--muted);font-size:12px;font-weight:750}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:12px}
-footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:13px}.footerRow{display:flex;justify-content:space-between;gap:15px}
+
+.schoolPanel{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px
+}
+
+.searchRow{
+  display:flex;
+  gap:9px
+}
+
+.input,
+.select{
+  width:100%;
+  padding:11px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--bg);
+  color:var(--text);
+  outline:none
+}
+
+.schoolResults{
+  display:grid;
+  gap:8px;
+  margin-top:13px;
+  max-height:360px;
+  overflow:auto
+}
+
+.schoolResult{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:13px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--card);
+  cursor:pointer
+}
+
+.schoolResult:hover{border-color:var(--red)}
+
+.schoolResult .si{
+  width:42px;
+  height:42px;
+  border-radius:11px;
+  background:var(--redsoft);
+  display:grid;
+  place-items:center
+}
+
+.schoolResult main{flex:1}
+.schoolResult b{display:block}
+.schoolResult small{color:var(--muted)}
+
+.distance{
+  color:var(--red);
+  font-size:11px;
+  font-weight:900
+}
+
+.curriculum{margin-top:13px}
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px
+}
+
+.chip{
+  background:var(--soft);
+  padding:8px 10px;
+  border-radius:9px;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:750
+}
+
+.note{
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.5;
+  margin-top:12px
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:35px 0;
+  color:var(--muted);
+  font-size:13px
+}
+
+.footerRow{
+  display:flex;
+  justify-content:space-between;
+  gap:15px
+}
+
 /* modals */
-.overlay{position:fixed;inset:0;background:rgba(8,9,12,.6);backdrop-filter:blur(6px);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.modal{width:min(440px,100%);max-height:min(600px,calc(100vh - 48px));overflow-y:auto;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 30px 90px rgba(0,0,0,.3)}.modalHead{display:flex;justify-content:space-between;align-items:flex-start}.modal h2{font-size:22px;margin:4px 0}.close{border:0;background:var(--soft);color:var(--text);width:34px;height:34px;border-radius:10px;flex-shrink:0}.form{display:grid;gap:7px;margin-top:14px}.form label{font-size:11px;font-weight:900;color:var(--muted);margin-top:4px}.form .btn{margin-top:6px}.helper{font-size:11px;color:var(--muted);line-height:1.5;margin:10px 0 0}.toast{position:fixed;z-index:200;right:18px;bottom:18px;background:var(--text);color:var(--card);padding:13px 16px;border-radius:13px;font-weight:750;display:none}.quizQ{font-size:18px;line-height:1.5;font-weight:800;margin:20px 0}.options{display:grid;gap:9px}.options button{padding:13px;border:1px solid var(--line);background:var(--soft);color:var(--text);border-radius:12px;text-align:left;font-weight:750}.options button:hover{border-color:var(--red)}.result{margin-top:13px;font-weight:850}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(8,9,12,.6);
+  backdrop-filter:blur(6px);
+  z-index:100;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px
+}
+
+.modal{
+  width:min(440px,100%);
+  max-height:min(600px,calc(100vh - 48px));
+  overflow-y:auto;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:20px;
+  box-shadow:0 30px 90px rgba(0,0,0,.3)
+}
+
+.modalHead{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start
+}
+
+.modal h2{
+  font-size:22px;
+  margin:4px 0
+}
+
+.close{
+  border:0;
+  background:var(--soft);
+  color:var(--text);
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  flex-shrink:0
+}
+
+.form{
+  display:grid;
+  gap:7px;
+  margin-top:14px
+}
+
+.form label{
+  font-size:11px;
+  font-weight:900;
+  color:var(--muted);
+  margin-top:4px
+}
+
+.form .btn{margin-top:6px}
+
+.helper{
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.5;
+  margin:10px 0 0
+}
+
+.toast{
+  position:fixed;
+  z-index:200;
+  right:18px;
+  bottom:18px;
+  background:var(--text);
+  color:var(--card);
+  padding:13px 16px;
+  border-radius:13px;
+  font-weight:750;
+  display:none
+}
+
+.quizQ{
+  font-size:18px;
+  line-height:1.5;
+  font-weight:800;
+  margin:20px 0
+}
+
+.options{
+  display:grid;
+  gap:9px
+}
+
+.options button{
+  padding:13px;
+  border:1px solid var(--line);
+  background:var(--soft);
+  color:var(--text);
+  border-radius:12px;
+  text-align:left;
+  font-weight:750
+}
+
+.options button:hover{border-color:var(--red)}
+
+.result{
+  margin-top:13px;
+  font-weight:850
+}
+
 /* minha conta */
-.profField{margin-top:9px}.profField:first-child{margin-top:0}.profRow{display:flex;align-items:center;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--soft)}.profValue{flex:1;font-weight:800;font-size:14px;line-height:1.35;word-break:break-word}.editIconBtn{flex-shrink:0;width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--red);font-size:14px;display:grid;place-items:center}.editIconBtn:hover{background:var(--redsoft);border-color:var(--red)}.profEditBox{margin-top:7px;padding:11px;border:1px dashed var(--line);border-radius:12px;background:var(--card);display:grid;gap:7px}.profEditActions{display:flex;gap:8px;justify-content:flex-end;margin-top:2px}.profEditActions .btn{padding:9px 13px;font-size:13px;margin-top:0}
-@media(max-width:850px){.landingGrid{grid-template-columns:1fr;gap:35px}.landingCard{max-width:620px}.navlinks{display:none}.stats{grid-template-columns:repeat(2,1fr)}.grid3,.gameGrid{grid-template-columns:1fr 1fr}.schoolPanel{grid-template-columns:1fr}.aiWrap{grid-template-columns:1fr}.aiSide{border-right:0;border-bottom:1px solid var(--line)}}
-@media(max-width:560px){.container{width:calc(100% - 24px)}.landing{padding:35px 0}.landing h1{font-size:49px;letter-spacing:-2.7px}.landing p{font-size:16px}.landingActions{flex-direction:column}.landingActions .btn{width:100%}.app h1{font-size:39px}.grid3,.gameGrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.footerRow{flex-direction:column}.aiInput .btn{padding:13px}.nav{gap:7px}.logo{font-size:17px}.logoMark{width:40px;height:40px}.overlay{padding:10px;align-items:flex-start;padding-top:26px}.modal{padding:16px;border-radius:18px;max-height:calc(100vh - 52px)}.modal h2{font-size:19px}.eyebrow{font-size:10px}}
+
+.profField{margin-top:9px}
+.profField:first-child{margin-top:0}
+
+.profRow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--soft)
+}
+
+.profValue{
+  flex:1;
+  font-weight:800;
+  font-size:14px;
+  line-height:1.35;
+  word-break:break-word
+}
+
+.editIconBtn{
+  flex-shrink:0;
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--red);
+  font-size:14px;
+  display:grid;
+  place-items:center
+}
+
+.editIconBtn:hover{
+  background:var(--redsoft);
+  border-color:var(--red)
+}
+
+.profEditBox{
+  margin-top:7px;
+  padding:11px;
+  border:1px dashed var(--line);
+  border-radius:12px;
+  background:var(--card);
+  display:grid;
+  gap:7px
+}
+
+.profEditActions{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  margin-top:2px
+}
+
+.profEditActions .btn{
+  padding:9px 13px;
+  font-size:13px;
+  margin-top:0
+}
+
+@media(max-width:850px){
+  .landingGrid{grid-template-columns:1fr;gap:35px}
+  .landingCard{max-width:620px}
+  .navlinks{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid3,.gameGrid{grid-template-columns:1fr 1fr}
+  .schoolPanel{grid-template-columns:1fr}
+  .aiWrap{grid-template-columns:1fr}
+  .aiSide{border-right:0;border-bottom:1px solid var(--line)}
+}
+
+@media(max-width:560px){
+  .container{width:calc(100% - 24px)}
+  .landing{padding:35px 0}
+  .landing h1{font-size:49px;letter-spacing:-2.7px}
+  .landing p{font-size:16px}
+  .landingActions{flex-direction:column}
+  .landingActions .btn{width:100%}
+  .app h1{font-size:39px}
+  .grid3,.gameGrid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .footerRow{flex-direction:column}
+  .aiInput .btn{padding:13px}
+  .nav{gap:7px}
+  .logo{font-size:17px}
+  .logoMark{width:40px;height:40px}
+  .overlay{padding:10px;align-items:flex-start;padding-top:26px}
+  .modal{padding:16px;border-radius:18px;max-height:calc(100vh - 52px)}
+  .modal h2{font-size:19px}
+  .eyebrow{font-size:10px}
+}
 
 /* sistema de ensino */
-.systemBox{margin-top:15px;padding:15px;border:1px solid var(--line);border-radius:15px;background:var(--soft)}
-.systemTop{display:flex;justify-content:space-between;gap:12px;align-items:center}.systemName{font-size:18px;font-weight:900}
-.systemStatus{font-size:11px;font-weight:850;color:var(--red);background:var(--redsoft);padding:6px 9px;border-radius:99px}
-.chapterBox{margin-top:12px;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
-.chapterBox b{display:block;margin-bottom:7px}.sourceNote{font-size:11px;color:var(--muted);line-height:1.5;margin-top:9px}
 
-.notFoundBox{margin-top:12px;padding:13px;border:1px dashed var(--line);border-radius:14px;background:var(--soft);display:flex;flex-direction:column;gap:6px}.notFoundBox span{font-size:12px;color:var(--muted);line-height:1.45}.notFoundBox .btn{align-self:flex-start;margin-top:3px}
+.systemBox{
+  margin-top:15px;
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:var(--soft)
+}
+
+.systemTop{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center
+}
+
+.systemName{
+  font-size:18px;
+  font-weight:900
+}
+
+.systemStatus{
+  font-size:11px;
+  font-weight:850;
+  color:var(--red);
+  background:var(--redsoft);
+  padding:6px 9px;
+  border-radius:99px
+}
+
+.chapterBox{
+  margin-top:12px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--card)
+}
+
+.chapterBox b{display:block;margin-bottom:7px}
+
+.sourceNote{
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.5;
+  margin-top:9px
+}
+
+.notFoundBox{
+  margin-top:12px;
+  padding:13px;
+  border:1px dashed var(--line);
+  border-radius:14px;
+  background:var(--soft);
+  display:flex;
+  flex-direction:column;
+  gap:6px
+}
+
+.notFoundBox span{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.45
+}
+
+.notFoundBox .btn{
+  align-self:flex-start;
+  margin-top:3px
+}
 </style>
 </head>
+
 <body>
+
 <header>
- <div class="container nav">
-  <a class="logo" href="#"><span class="logoMark">I</span>InspiRED</a>
-  <nav class="navlinks" id="navlinks"><a href="#materias">Matérias</a><a href="#ia">IA</a><a href="#games">Mini games</a><a href="#escola">Escola</a></nav>
-  <div class="navRight"><button class="icon" id="themeBtn" title="Tema">☾</button><button class="accountBtn" id="accountBtn" onclick="openAccount()">Entrar</button></div>
- </div>
+  <div class="container nav">
+    <a class="logo" href="#">
+      <span class="logoMark">I</span>
+      InspiRED
+    </a>
+
+    <nav class="navlinks" id="navlinks">
+      <a href="#materias">Matérias</a>
+      <a href="#ia">IA</a>
+      <a href="#games">Mini games</a>
+      <a href="#escola">Escola</a>
+    </nav>
+
+    <div class="navRight">
+      <button class="icon" id="themeBtn" title="Tema">☾</button>
+      <button class="accountBtn" id="accountBtn" onclick="openAccount()">Entrar</button>
+    </div>
+  </div>
 </header>
 
 <section class="landing" id="landing">
- <div class="container landingGrid">
-  <div>
-   <div class="eyebrow">Plataforma de estudos</div>
-   <h1>Estude melhor. Fique <span>InspiRED.</span></h1>
-   <p>Crie sua conta, informe sua escola e sua série e monte um espaço de estudos feito para você.</p>
-   <div class="landingActions"><button class="btn primary" onclick="openAccount()">Entrar / criar conta →</button></div>
+  <div class="container landingGrid">
+
+    <div>
+      <div class="eyebrow">Plataforma de estudos</div>
+
+      <h1>
+        Estude melhor. Fique
+        <span>InspiRED.</span>
+      </h1>
+
+      <p>
+        Crie sua conta, informe sua escola e sua série e monte um espaço
+        de estudos feito para você.
+      </p>
+
+      <div class="landingActions">
+        <button class="btn primary" onclick="openAccount()">
+          Entrar / criar conta →
+        </button>
+      </div>
+    </div>
+
+    <div class="landingCard">
+
+      <div class="fakeLogo">I</div>
+
+      <h2>Seu estudo começa aqui.</h2>
+
+      <p>
+        Depois de entrar, você terá acesso às matérias,
+        à IA de estudos, aos mini games e à busca de escolas.
+      </p>
+
+      <div class="lineItem">
+        <span class="dot">1</span>
+        <div>
+          <b>Conte seu nível</b>
+          <span>Nome, escola e série</span>
+        </div>
+      </div>
+
+      <div class="lineItem">
+        <span class="dot">2</span>
+        <div>
+          <b>Escolha o que estudar</b>
+          <span>Conteúdos organizados por série</span>
+        </div>
+      </div>
+
+      <div class="lineItem">
+        <span class="dot">3</span>
+        <div>
+          <b>Aprenda e pratique</b>
+          <span>IA + exercícios + jogos</span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  <div class="landingCard">
-   <div class="fakeLogo">I</div><h2>Seu estudo começa aqui.</h2><p>Depois de entrar, você terá acesso às matérias, à IA de estudos, aos mini games e à busca de escolas.</p>
-   <div class="lineItem"><span class="dot">1</span><div><b>Conte seu nível</b><span>Nome, escola e série</span></div></div>
-   <div class="lineItem"><span class="dot">2</span><div><b>Escolha o que estudar</b><span>Conteúdos organizados por série</span></div></div>
-   <div class="lineItem"><span class="dot">3</span><div><b>Aprenda e pratique</b><span>IA + exercícios + jogos</span></div></div>
-  </div>
- </div>
 </section>
 
 <main class="app" id="app">
- <section class="heroApp"><div class="container"><div class="welcome">Olá, <strong id="userName">estudante</strong> 👋</div><h1>Seu espaço de estudos.</h1><p class="appLead">Tudo começa do zero. Conforme você estudar, resolver exercícios e jogar, suas estatísticas vão evoluir.</p></div></section>
 
- <section class="section"><div class="container"><div class="stats">
-  <div class="stat"><div class="n" id="streak">0</div><div class="l">dias seguidos</div></div><div class="stat"><div class="n" id="xp">0</div><div class="l">XP conquistado</div></div><div class="stat"><div class="n" id="questions">0</div><div class="l">questões respondidas</div></div><div class="stat"><div class="n" id="progress">0%</div><div class="l">progresso</div></div>
- </div></div></section>
+<section class="heroApp">
+  <div class="container">
+    <div class="welcome">
+      Olá,
+      <strong id="userName">estudante</strong>
+      👋
+    </div>
 
- <section class="section" id="escola"><div class="container"><div class="sectionTitle"><div class="eyebrow">Minha escola</div><h2 id="schoolTitle">Escolha sua escola</h2><p>Pesquise pelo nome ou permita a localização para procurar escolas próximas.</p></div>
-  <div class="schoolPanel">
-   <div class="card"><div class="searchRow"><input class="input" id="schoolSearch" placeholder="Nome da escola..."><button class="btn primary" onclick="searchSchools()">Buscar</button></div><div class="searchRow" style="margin-top:8px"><input class="input" id="schoolRegionSearch" placeholder="Pesquisar por região, cidade, bairro ou estado..."><button class="btn secondary" onclick="searchSchoolsByRegion()">🔎 Região</button></div><button class="btn secondary" style="margin-top:10px" onclick="nearbySchools()">📍 Procurar perto de mim</button><div class="schoolResults" id="schoolResults"></div><div class="notFoundBox"><b>Não achou sua escola?</b><span>Você pode cadastrar o nome dela manualmente e continuar.</span><button class="btn secondary" onclick="manualSchool('main')">➕ Informar escola manualmente</button></div><div class="note">A busca usa dados públicos de mapas quando disponível. A localização só é usada após sua permissão.</div></div>
-   <div class="card"><h3>Currículo da sua série</h3><p class="muted" style="font-size:13px">O InspiRED usa uma base curricular geral como ponto de partida. Conteúdos específicos da escola podem ser adicionados quando a escola/rede fornecer esses dados.</p><div class="curriculum" id="curriculum"><div class="empty" style="padding:22px">Selecione uma escola para carregar o contexto.</div></div></div>
+    <h1>Seu espaço de estudos.</h1>
+
+    <p class="appLead">
+      Tudo começa do zero. Conforme você estudar,
+      resolver exercícios e jogar, suas estatísticas vão evoluir.
+    </p>
   </div>
- </div></section>
+</section>
 
- <section class="section" id="materias"><div class="container"><div class="sectionTitle"><div class="eyebrow">Conteúdos</div><h2>Matérias da sua série</h2><p>Selecione uma matéria para conversar com a IA sobre ela.</p></div><div class="grid3" id="subjects"></div></div></section>
+<section class="section">
+  <div class="container">
 
- <section class="section" id="ia"><div class="container"><div class="sectionTitle"><div class="eyebrow">InspiRED IA</div><h2>Aprenda conversando.</h2><p>A IA usa seu nome, escola, série e matéria escolhida como contexto.</p></div>
-  <div class="card aiWrap"><aside class="aiSide"><h3>Contexto</h3><p>Quanto mais específico for o assunto, melhor será a explicação.</p><div class="contextBox"><small>Estudante</small><b id="aiStudent">—</b><small style="display:block;margin-top:9px">Série</small><b id="aiGrade">—</b></div><button class="promptBtn" onclick="quickPrompt('Explique este conteúdo de um jeito simples, como se eu estivesse vendo pela primeira vez.')">💡 Explicar de forma simples</button><button class="promptBtn" onclick="quickPrompt('Faça um resumo curto e depois me faça 3 perguntas para eu testar se entendi.')">📝 Resumir e testar</button><button class="promptBtn" onclick="quickPrompt('Crie uma questão de nível médio, espere minha resposta e depois corrija explicando o erro.')">🎯 Criar exercício</button></aside>
-   <div class="aiMain"><div class="aiHead"><div><b>InspiRED IA</b><div class="muted" style="font-size:12px">Tutor de estudos</div></div><span class="online">● pronta para conversar</span></div><div class="messages" id="messages"><div class="msg aiMsg">Olá! 👋 Escolha uma matéria acima ou escreva uma dúvida. Vou considerar sua série para explicar o assunto no nível certo.</div></div><div class="aiInput"><input id="aiInput" placeholder="Pergunte sobre o que você está estudando..." onkeydown="if(event.key==='Enter')sendAI()"><button class="btn primary" onclick="sendAI()">Enviar</button></div></div>
+    <div class="stats">
+
+      <div class="stat">
+        <div class="n" id="streak">0</div>
+        <div class="l">dias seguidos</div>
+      </div>
+
+      <div class="stat">
+        <div class="n" id="xp">0</div>
+        <div class="l">XP conquistado</div>
+      </div>
+
+      <div class="stat">
+        <div class="n" id="questions">0</div>
+        <div class="l">questões respondidas</div>
+      </div>
+
+      <div class="stat">
+        <div class="n" id="progress">0%</div>
+        <div class="l">progresso</div>
+      </div>
+
+    </div>
+
   </div>
- </div></section>
+</section>
 
- <section class="section" id="games"><div class="container"><div class="sectionTitle"><div class="eyebrow">Fixação</div><h2>Mini games</h2><p>Jogue, responda e acumule XP. Seu placar começa em zero.</p></div><div class="gameGrid">
-  <article class="card game"><div class="gameIcon">🧠</div><h3>Desafio relâmpago</h3><p>Perguntas geradas pela IA com base no que você estudou agora.</p><button class="btn primary" onclick="openQuiz()">Jogar</button></article>
-  <article class="card game"><div class="gameIcon">🃏</div><h3>Memória de conceitos</h3><p>Pares gerados pela IA a partir do assunto recente.</p><button class="btn secondary" onclick="startMemory()">Jogar</button></article>
-  <article class="card game"><div class="gameIcon">⚡</div><h3>Verdadeiro ou falso</h3><p>Afirmações geradas pela IA sobre o seu conteúdo recente.</p><button class="btn secondary" onclick="startTrueFalse()">Jogar</button></article>
- </div></div></section>
+<section class="section" id="escola">
 
- <section class="section"><div class="container"><div class="card empty"><div class="emptyIcon">📅</div><b>Nenhuma prova cadastrada</b><div style="margin-top:5px">Quando sua escola ou você adicionar uma avaliação, ela aparecerá aqui.</div></div></div></section>
+  <div class="container">
+
+    <div class="sectionTitle">
+      <div class="eyebrow">Minha escola</div>
+      <h2 id="schoolTitle">Escolha sua escola</h2>
+      <p>
+        Pesquise pelo nome ou permita a localização
+        para procurar escolas próximas.
+      </p>
+    </div>
+
+    <div class="schoolPanel">
+
+      <div class="card">
+
+        <div class="searchRow">
+          <input
+            class="input"
+            id="schoolSearch"
+            placeholder="Nome da escola..."
+          >
+
+          <button
+            class="btn primary"
+            onclick="searchSchools()"
+          >
+            Buscar
+          </button>
+        </div>
+
+        <div class="searchRow" style="margin-top:8px">
+
+          <input
+            class="input"
+            id="schoolRegionSearch"
+            placeholder="Pesquisar por região, cidade, bairro ou estado..."
+          >
+
+          <button
+            class="btn secondary"
+            onclick="searchSchoolsByRegion()"
+          >
+            🔎 Região
+          </button>
+
+        </div>
+
+        <button
+          class="btn secondary"
+          style="margin-top:10px"
+          onclick="nearbySchools()"
+        >
+          📍 Procurar perto de mim
+        </button>
+
+        <div
+          class="schoolResults"
+          id="schoolResults"
+        ></div>
+
+        <div class="notFoundBox">
+
+          <b>Não achou sua escola?</b>
+
+          <span>
+            Você pode cadastrar o nome dela manualmente e continuar.
+          </span>
+
+          <button
+            class="btn secondary"
+            onclick="manualSchool('main')"
+          >
+            ➕ Informar escola manualmente
+          </button>
+
+        </div>
+
+        <div class="note">
+          A busca usa dados públicos de mapas quando disponível.
+          A localização só é usada após sua permissão.
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Currículo da sua série</h3>
+
+        <p
+          class="muted"
+          style="font-size:13px"
+        >
+          O InspiRED usa uma base curricular geral como ponto de partida.
+          Conteúdos específicos da escola podem ser adicionados quando
+          a escola/rede fornecer esses dados.
+        </p>
+
+        <div
+          class="curriculum"
+          id="curriculum"
+        >
+          <div
+            class="empty"
+            style="padding:22px"
+          >
+            Selecione uma escola para carregar o contexto.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section
+  class="section"
+  id="materias"
+>
+
+  <div class="container">
+
+    <div class="sectionTitle">
+
+      <div class="eyebrow">Conteúdos</div>
+
+      <h2>Matérias da sua série</h2>
+
+      <p>
+        Selecione uma matéria para conversar com a IA sobre ela.
+      </p>
+
+    </div>
+
+    <div
+      class="grid3"
+      id="subjects"
+    ></div>
+
+  </div>
+
+</section>
+
+<section
+  class="section"
+  id="ia"
+>
+
+<div class="container">
+
+<div class="sectionTitle">
+
+<div class="eyebrow">
+InspiRED IA
+</div>
+
+<h2>
+Aprenda conversando.
+</h2>
+
+<p>
+A IA usa seu nome, escola, série e matéria escolhida como contexto.
+</p>
+
+</div>
+
+<div class="card aiWrap">
+
+<aside class="aiSide">
+
+<h3>
+Contexto
+</h3>
+
+<p>
+Quanto mais específico for o assunto,
+melhor será a explicação.
+</p>
+
+<div class="contextBox">
+
+<small>
+Estudante
+</small>
+
+<b id="aiStudent">
+—
+</b>
+
+<small style="display:block;margin-top:9px">
+Série
+</small>
+
+<b id="aiGrade">
+—
+</b>
+
+</div>
+
+<button
+class="promptBtn"
+onclick="quickPrompt('Explique este conteúdo de um jeito simples, como se eu estivesse vendo pela primeira vez.')"
+>
+💡 Explicar de forma simples
+</button>
+
+<button
+class="promptBtn"
+onclick="quickPrompt('Faça um resumo curto e depois me faça 3 perguntas para eu testar se entendi.')"
+>
+📝 Resumir e testar
+</button>
+
+<button
+class="promptBtn"
+onclick="quickPrompt('Crie uma questão de nível médio, espere minha resposta e depois corrija explicando o erro.')"
+>
+🎯 Criar exercício
+</button>
+
+</aside>
+
+<div class="aiMain">
+
+<div class="aiHead">
+
+<div>
+
+<b>
+InspiRED IA
+</b>
+
+<div
+class="muted"
+style="font-size:12px"
+>
+Tutor de estudos
+</div>
+
+</div>
+
+<span class="online">
+● pronta para conversar
+</span>
+
+</div>
+
+<div
+class="messages"
+id="messages"
+>
+
+<div class="msg aiMsg">
+Olá! 👋 Escolha uma matéria acima ou escreva uma dúvida.
+Vou considerar sua série para explicar o assunto no nível certo.
+</div>
+
+</div>
+
+<div class="aiInput">
+
+<input
+id="aiInput"
+placeholder="Pergunte sobre o que você está estudando..."
+onkeydown="if(event.key==='Enter')sendAI()"
+>
+
+<button
+class="btn primary"
+onclick="sendAI()"
+>
+Enviar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section
+class="section"
+id="games"
+>
+
+<div class="container">
+
+<div class="sectionTitle">
+
+<div class="eyebrow">
+Fixação
+</div>
+
+<h2>
+Mini games
+</h2>
+
+<p>
+Jogue, responda e acumule XP.
+Seu placar começa em zero.
+</p>
+
+</div>
+
+<div class="gameGrid">
+
+<article class="card game">
+
+<div class="gameIcon">
+🧠
+</div>
+
+<h3>
+Desafio relâmpago
+</h3>
+
+<p>
+Perguntas geradas pela IA com base
+no que você estudou agora.
+</p>
+
+<button
+class="btn primary"
+onclick="openQuiz()"
+>
+Jogar
+</button>
+
+</article>
+
+<article class="card game">
+
+<div class="gameIcon">
+🃏
+</div>
+
+<h3>
+Memória de conceitos
+</h3>
+
+<p>
+Pares gerados pela IA a partir
+do assunto recente.
+</p>
+
+<button
+class="btn secondary"
+onclick="startMemory()"
+>
+Jogar
+</button>
+
+</article>
+
+<article class="card game">
+
+<div class="gameIcon">
+⚡
+</div>
+
+<h3>
+Verdadeiro ou falso
+</h3>
+
+<p>
+Afirmações geradas pela IA
+sobre o seu conteúdo recente.
+</p>
+
+<button
+class="btn secondary"
+onclick="startTrueFalse()"
+>
+Jogar
+</button>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="card empty">
+
+<div class="emptyIcon">
+📅
+</div>
+
+<b>
+Nenhuma prova cadastrada
+</b>
+
+<div style="margin-top:5px">
+Quando sua escola ou você adicionar
+uma avaliação, ela aparecerá aqui.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
-<footer><div class="container footerRow"><div><b style="color:var(--red)">InspiRED</b><div>Estude. Pratique. Evolua.</div></div><div>Protótipo escolar</div></div></footer>
+
+<footer>
+
+<div class="container footerRow">
+
+<div>
+
+<b style="color:var(--red)">
+InspiRED
+</b>
+
+<div>
+Estude. Pratique. Evolua.
+</div>
+
+</div>
+
+<div>
+Protótipo escolar
+</div>
+
+</div>
+
+</footer>
 
 <!-- Account -->
-<div class="overlay" id="accountModal"><div class="modal"><div class="modalHead"><div><div class="eyebrow">Primeiro acesso</div><h2>Crie sua conta</h2></div><button class="close" onclick="closeModal('accountModal')">✕</button></div><p class="muted" style="font-size:14px;line-height:1.5">Não precisa de e-mail nesta primeira versão. Informe os dados que o InspiRED precisa para personalizar seus estudos.</p><div class="form"><label>NOME</label><input class="input" id="nameInput" placeholder="Como você quer ser chamado?"><label>ESCOLA</label><div class="searchRow"><input class="input" id="accountSchoolSearch" placeholder="Nome da escola..."><button class="btn primary" type="button" onclick="searchAccountSchools()">Buscar</button></div><div class="searchRow" style="margin-top:8px"><input class="input" id="accountRegionSearch" placeholder="Região, cidade, bairro ou estado..."><button class="btn secondary" type="button" onclick="searchAccountSchoolsByRegion()">🔎 Região</button></div><button class="btn secondary" type="button" style="margin-top:8px" onclick="nearbyAccountSchools()">📍 Procurar perto de mim</button><div class="schoolResults" id="accountSchoolResults"></div><div class="notFoundBox"><b>Não achou sua escola?</b><span>Informe o nome manualmente. Depois você poderá confirmar o sistema de ensino.</span><button class="btn secondary" type="button" onclick="manualSchool('account')">➕ Informar escola manualmente</button></div><div id="selectedAccountSchool" class="note" style="display:none;background:var(--redsoft);padding:11px;border-radius:12px;color:var(--text)"></div><label>SÉRIE</label><select class="select" id="gradeInput"><option value="">Selecione sua série</option><option>6º ano</option><option>7º ano</option><option>8º ano</option><option>9º ano</option><option>1º ano do Ensino Médio</option><option>2º ano do Ensino Médio</option><option>3º ano do Ensino Médio</option></select><button class="btn primary" onclick="createAccount()">Criar minha conta →</button></div><p class="helper">Os dados do protótipo ficam salvos neste navegador. Em uma versão real, a conta seria conectada a um banco de dados.</p></div></div>
+
+<div
+class="overlay"
+id="accountModal"
+>
+
+<div class="modal">
+
+<div class="modalHead">
+
+<div>
+
+<div class="eyebrow">
+Primeiro acesso
+</div>
+
+<h2>
+Crie sua conta
+</h2>
+
+</div>
+
+<button
+class="close"
+onclick="closeModal('accountModal')"
+>
+✕
+</button>
+
+</div>
+
+<p
+class="muted"
+style="font-size:14px;line-height:1.5"
+>
+Não precisa de e-mail nesta primeira versão.
+Informe os dados que o InspiRED precisa para personalizar seus estudos.
+</p>
+
+<div class="form">
+
+<label>
+NOME
+</label>
+
+<input
+class="input"
+id="nameInput"
+placeholder="Como você quer ser chamado?"
+>
+
+<label>
+ESCOLA
+</label>
+
+<div class="searchRow">
+
+<input
+class="input"
+id="accountSchoolSearch"
+placeholder="Nome da escola..."
+>
+
+<button
+class="btn primary"
+type="button"
+onclick="searchAccountSchools()"
+>
+Buscar
+</button>
+
+</div>
+
+<div
+class="searchRow"
+style="margin-top:8px"
+>
+
+<input
+class="input"
+id="accountRegionSearch"
+placeholder="Região, cidade, bairro ou estado..."
+>
+
+<button
+class="btn secondary"
+type="button"
+onclick="searchAccountSchoolsByRegion()"
+>
+🔎 Região
+</button>
+
+</div>
+
+<button
+class="btn secondary"
+type="button"
+style="margin-top:8px"
+onclick="nearbyAccountSchools()"
+>
+📍 Procurar perto de mim
+</button>
+
+<div
+class="schoolResults"
+id="accountSchoolResults"
+></div>
+
+<div class="notFoundBox">
+
+<b>
+Não achou sua escola?
+</b>
+
+<span>
+Informe o nome manualmente.
+Depois você poderá confirmar o sistema de ensino.
+</span>
+
+<button
+class="btn secondary"
+type="button"
+onclick="manualSchool('account')"
+>
+➕ Informar escola manualmente
+</button>
+
+</div>
+
+<div
+id="selectedAccountSchool"
+class="note"
+style="
+display:none;
+background:var(--redsoft);
+padding:11px;
+border-radius:12px;
+color:var(--text)
+"
+></div>
+
+<label>
+SÉRIE
+</label>
+
+<select
+class="select"
+id="gradeInput"
+>
+
+<option value="">
+Selecione sua série
+</option>
+
+<option>
+6º ano
+</option>
+
+<option>
+7º ano
+</option>
+
+<option>
+8º ano
+</option>
+
+<option>
+9º ano
+</option>
+
+<option>
+1º ano do Ensino Médio
+</option>
+
+<option>
+2º ano do Ensino Médio
+</option>
+
+<option>
+3º ano do Ensino Médio
+</option>
+
+</select>
+
+<button
+class="btn primary"
+onclick="createAccount()"
+>
+Criar minha conta →
+</button>
+
+</div>
+
+<p class="helper">
+Os dados do protótipo ficam salvos neste navegador.
+Em uma versão real, a conta seria conectada a um banco de dados.
+</p>
+
+</div>
+
+</div>
 
 <!-- Minha conta -->
-<div class="overlay" id="profileModal"><div class="modal"><div class="modalHead"><div><div class="eyebrow">Meus dados</div><h2>Minha conta</h2></div><button class="close" onclick="closeModal('profileModal')">✕</button></div><p class="muted" style="font-size:13px;line-height:1.5;margin:8px 0 0">Confira e edite suas informações. Clique no lápis para alterar um dado.</p><div class="form" style="margin-top:12px">
- <div class="profField"><label>NOME</label><div class="profRow" id="profRow_name"><div class="profValue" id="profDisplay_name">—</div><button class="editIconBtn" onclick="editProfileField('name')" title="Editar nome">✏️</button></div></div>
- <div class="profField"><label>ESCOLA</label><div class="profRow" id="profRow_school"><div class="profValue" id="profDisplay_school">—</div><button class="editIconBtn" onclick="editProfileField('school')" title="Editar escola">✏️</button></div></div>
- <div class="profField"><label>SÉRIE</label><div class="profRow" id="profRow_grade"><div class="profValue" id="profDisplay_grade">—</div><button class="editIconBtn" onclick="editProfileField('grade')" title="Editar série">✏️</button></div></div>
- <div class="profField"><label>SISTEMA DE ENSINO</label><div class="profRow" id="profRow_system"><div class="profValue" id="profDisplay_system">—</div><button class="editIconBtn" onclick="editProfileField('system')" title="Editar sistema de ensino">✏️</button></div></div>
-</div><p class="helper">Os dados do protótipo ficam salvos neste navegador.</p><div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line)"><button class="btn secondary" type="button" style="width:100%" onclick="logoutAccount()">🚪 Sair da conta</button></div></div></div>
+
+<div
+class="overlay"
+id="profileModal"
+>
+
+<div class="modal">
+
+<div class="modalHead">
+
+<div>
+
+<div class="eyebrow">
+Meus dados
+</div>
+
+<h2>
+Minha conta
+</h2>
+
+</div>
+
+<button
+class="close"
+onclick="closeModal('profileModal')"
+>
+✕
+</button>
+
+</div>
+
+<p
+class="muted"
+style="
+font-size:13px;
+line-height:1.5;
+margin:8px 0 0
+"
+>
+Confira e edite suas informações.
+Clique no lápis para alterar um dado.
+</p>
+
+<div
+class="form"
+style="margin-top:12px"
+>
+
+<div class="profField">
+
+<label>
+NOME
+</label>
+
+<div
+class="profRow"
+id="profRow_name"
+>
+
+<div
+class="profValue"
+id="profDisplay_name"
+>
+—
+</div>
+
+<button
+class="editIconBtn"
+onclick="editProfileField('name')"
+title="Editar nome"
+>
+✏️
+</button>
+
+</div>
+
+</div>
+
+<div class="profField">
+
+<label>
+ESCOLA
+</label>
+
+<div
+class="profRow"
+id="profRow_school"
+>
+
+<div
+class="profValue"
+id="profDisplay_school"
+>
+—
+</div>
+
+<button
+class="editIconBtn"
+onclick="editProfileField('school')"
+title="Editar escola"
+>
+✏️
+</button>
+
+</div>
+
+</div>
+
+<div class="profField">
+
+<label>
+SÉRIE
+</label>
+
+<div
+class="profRow"
+id="profRow_grade"
+>
+
+<div
+class="profValue"
+id="profDisplay_grade"
+>
+—
+</div>
+
+<button
+class="editIconBtn"
+onclick="editProfileField('grade')"
+title="Editar série"
+>
+✏️
+</button>
+
+</div>
+
+</div>
+
+<div class="profField">
+
+<label>
+SISTEMA DE ENSINO
+</label>
+
+<div
+class="profRow"
+id="profRow_system"
+>
+
+<div
+class="profValue"
+id="profDisplay_system"
+>
+—
+</div>
+
+<button
+class="editIconBtn"
+onclick="editProfileField('system')"
+title="Editar sistema de ensino"
+>
+✏️
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<p class="helper">
+Os dados do protótipo ficam salvos neste navegador.
+</p>
+
+<div
+style="
+margin-top:16px;
+padding-top:14px;
+border-top:1px solid var(--line)
+"
+>
+
+<button
+class="btn secondary"
+type="button"
+style="width:100%"
+onclick="logoutAccount()"
+>
+🚪 Sair da conta
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 <!-- Quiz -->
-<div class="overlay" id="quizModal"><div class="modal"><div class="modalHead"><div><div class="eyebrow">Desafio</div><h2 id="quizTitle">Questão</h2></div><button class="close" onclick="closeModal('quizModal')">✕</button></div><div class="quizQ" id="quizQuestion"></div><div class="options" id="quizOptions"></div><div class="result" id="quizResult"></div></div></div>
+
+<div
+class="overlay"
+id="quizModal"
+>
+
+<div class="modal">
+
+<div class="modalHead">
+
+<div>
+
+<div class="eyebrow">
+Desafio
+</div>
+
+<h2 id="quizTitle">
+Questão
+</h2>
+
+</div>
+
+<button
+class="close"
+onclick="closeModal('quizModal')"
+>
+✕
+</button>
+
+</div>
+
+<div
+class="quizQ"
+id="quizQuestion"
+></div>
+
+<div
+class="options"
+id="quizOptions"
+></div>
+
+<div
+class="result"
+id="quizResult"
+></div>
+
+</div>
+
+</div>
+
 <!-- Memory -->
-<div class="overlay" id="memoryModal"><div class="modal"><div class="modalHead"><div><div class="eyebrow">Memória</div><h2>Combine os pares</h2></div><button class="close" onclick="closeModal('memoryModal')">✕</button></div><p class="muted" style="font-size:13px">Clique em duas cartas. Encontre os pares.</p><div id="memoryGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px"></div><div class="result" id="memoryResult"></div></div></div>
+
+<div
+class="overlay"
+id="memoryModal"
+>
+
+<div class="modal">
+
+<div class="modalHead">
+
+<div>
+
+<div class="eyebrow">
+Memória
+</div>
+
+<h2>
+Combine os pares
+</h2>
+
+</div>
+
+<button
+class="close"
+onclick="closeModal('memoryModal')"
+>
+✕
+</button>
+
+</div>
+
+<p
+class="muted"
+style="font-size:13px"
+>
+Clique em duas cartas.
+Encontre os pares.
+</p>
+
+<div
+id="memoryGrid"
+style="
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:8px
+"
+></div>
+
+<div
+class="result"
+id="memoryResult"
+></div>
+
+</div>
+
+</div>
+
 <!-- TF -->
-<div class="overlay" id="tfModal"><div class="modal"><div class="modalHead"><div><div class="eyebrow">Verdadeiro ou falso</div><h2 id="tfTitle">Rodada 1/5</h2></div><button class="close" onclick="closeModal('tfModal')">✕</button></div><div class="quizQ" id="tfQuestion"></div><div id="tfButtons" style="display:flex;gap:9px"><button class="btn primary" style="flex:1" onclick="answerTF(true)">Verdadeiro</button><button class="btn secondary" style="flex:1" onclick="answerTF(false)">Falso</button></div><div class="result" id="tfResult"></div></div></div>
-<div class="toast" id="toast"></div>
+
+<div
+class="overlay"
+id="tfModal"
+>
+
+<div class="modal">
+
+<div class="modalHead">
+
+<div>
+
+<div class="eyebrow">
+Verdadeiro ou falso
+</div>
+
+<h2 id="tfTitle">
+Rodada 1/5
+</h2>
+
+</div>
+
+<button
+class="close"
+onclick="closeModal('tfModal')"
+>
+✕
+</button>
+
+</div>
+
+<div
+class="quizQ"
+id="tfQuestion"
+></div>
+
+<div
+id="tfButtons"
+style="display:flex;gap:9px"
+>
+
+<button
+class="btn primary"
+style="flex:1"
+onclick="answerTF(true)"
+>
+Verdadeiro
+</button>
+
+<button
+class="btn secondary"
+style="flex:1"
+onclick="answerTF(false)"
+>
+Falso
+</button>
+
+</div>
+
+<div
+class="result"
+id="tfResult"
+></div>
+
+</div>
+
+</div>
+
+<div
+class="toast"
+id="toast"
+></div>
+
 <script>
-const knownSchools=[{name:'EE Poeta Domingos Bauer Leite',display_name:'EE Poeta Domingos Bauer Leite, Vila Ubirajara, Miracatu, SP',local:true}];
+
+const knownSchools=[
+  {
+    name:'EE Poeta Domingos Bauer Leite',
+    display_name:'EE Poeta Domingos Bauer Leite, Vila Ubirajara, Miracatu, SP',
+    local:true
+  }
+];
+
 const knownSchoolSystems={
-  'ee poeta domingos bauer leite':'Sistema de Ensino Público Estadual Paulista',
-  'poeta domingos bauer leite':'Sistema de Ensino Público Estadual Paulista',
-  'escola estadual poeta domingos bauer leite':'Sistema de Ensino Público Estadual Paulista',
-  'domingos bauer leite poeta':'Sistema de Ensino Público Estadual Paulista'
+
+  'ee poeta domingos bauer leite':
+    'Sistema de Ensino Público Estadual Paulista',
+
+  'poeta domingos bauer leite':
+    'Sistema de Ensino Público Estadual Paulista',
+
+  'escola estadual poeta domingos bauer leite':
+    'Sistema de Ensino Público Estadual Paulista',
+
+  'domingos bauer leite poeta':
+    'Sistema de Ensino Público Estadual Paulista'
+
 };
-function normalizeSchoolName(name){return (name||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim()}
+
+function normalizeSchoolName(name){
+
+  return (name||'')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .replace(/\s+/g,' ')
+    .trim();
+
+}
 
 const teachingSystems={
+
   'FTD Sistema de Ensino':{
+
     official:true,
-    description:'Sistema de ensino da FTD Educação, com materiais da Educação Infantil ao Ensino Médio.',
-    source:'FTD Educação',
-    subjects:['Língua Portuguesa','Matemática','Ciências','História','Geografia','Língua Inglesa'],
-    note:'A estrutura exata de capítulos, bimestres e páginas depende da coleção e da adoção da escola.'
+
+    description:
+      'Sistema de ensino da FTD Educação, com materiais da Educação Infantil ao Ensino Médio.',
+
+    source:
+      'FTD Educação',
+
+    subjects:[
+      'Língua Portuguesa',
+      'Matemática',
+      'Ciências',
+      'História',
+      'Geografia',
+      'Língua Inglesa'
+    ],
+
+    note:
+      'A estrutura exata de capítulos, bimestres e páginas depende da coleção e da adoção da escola.'
+
   },
+
   'Bernoulli Sistema de Ensino':{
+
     official:true,
-    description:'Sistema de ensino com soluções para Anos Iniciais, Anos Finais e Ensino Médio.',
-    source:'Bernoulli Educação',
-    subjects:['Língua Portuguesa','Matemática','Ciências','História','Geografia','Língua Inglesa'],
-    note:'A organização exata por capítulo/volume depende da coleção e da etapa.'
+
+    description:
+      'Sistema de ensino com soluções para Anos Iniciais, Anos Finais e Ensino Médio.',
+
+    source:
+      'Bernoulli Educação',
+
+    subjects:[
+      'Língua Portuguesa',
+      'Matemática',
+      'Ciências',
+      'História',
+      'Geografia',
+      'Língua Inglesa'
+    ],
+
+    note:
+      'A organização exata por capítulo/volume depende da coleção e da etapa.'
+
   },
+
   'SAS Educação':{
+
     official:false,
-    description:'Sistema de ensino identificado pela base local do InspiRED.',
-    source:'Base do InspiRED',
-    subjects:['Língua Portuguesa','Matemática','Ciências','História','Geografia','Língua Inglesa'],
-    note:'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
+    description:
+      'Sistema de ensino identificado pela base local do InspiRED.',
+
+    source:
+      'Base do InspiRED',
+
+    subjects:[
+      'Língua Portuguesa',
+      'Matemática',
+      'Ciências',
+      'História',
+      'Geografia',
+      'Língua Inglesa'
+    ],
+
+    note:
+      'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
   },
+
   'Anglo':{
+
     official:false,
-    description:'Sistema de ensino identificado pela base local do InspiRED.',
-    source:'Base do InspiRED',
-    subjects:['Língua Portuguesa','Matemática','Ciências','História','Geografia','Língua Inglesa'],
-    note:'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
+    description:
+      'Sistema de ensino identificado pela base local do InspiRED.',
+
+    source:
+      'Base do InspiRED',
+
+    subjects:[
+      'Língua Portuguesa',
+      'Matemática',
+      'Ciências',
+      'História',
+      'Geografia',
+      'Língua Inglesa'
+    ],
+
+    note:
+      'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
   },
+
   'Poliedro':{
+
     official:false,
-    description:'Sistema de ensino identificado pela base local do InspiRED.',
-    source:'Base do InspiRED',
-    subjects:['Língua Portuguesa','Matemática','Ciências','História','Geografia','Língua Inglesa'],
-    note:'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
+    description:
+      'Sistema de ensino identificado pela base local do InspiRED.',
+
+    source:
+      'Base do InspiRED',
+
+    subjects:[
+      'Língua Portuguesa',
+      'Matemática',
+      'Ciências',
+      'História',
+      'Geografia',
+      'Língua Inglesa'
+    ],
+
+    note:
+      'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
   },
+
   'Positivo':{
+
     official:false,
-    description:'Sistema de ensino identificado pela base local do InspiRED.',
-    source:'Base do InspiRED',
-    subjects:['Língua Portuguesa','Matemática','Ciências','História','Geografia','Língua Inglesa'],
-    note:'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
+    description:
+      'Sistema de ensino identificado pela base local do InspiRED.',
+
+    source:
+      'Base do InspiRED',
+
+    subjects:[
+      'Língua Portuguesa',
+      'Matemática',
+      'Ciências',
+      'História',
+      'Geografia',
+      'Língua Inglesa'
+    ],
+
+    note:
+      'Confirme a adoção com a escola antes de tratar o conteúdo como específico do material.'
+
   },
-  'Sistema de Ensino Público Estadual Paulista':{official:true,description:'Rede pública estadual de ensino de São Paulo, orientada pelo Currículo Paulista e pelas orientações da Secretaria da Educação do Estado de São Paulo.',source:'Secretaria da Educação do Estado de São Paulo',subjects:['Língua Portuguesa','Matemática','Ciências','História','Geografia','Língua Inglesa'],note:'É uma rede pública estadual, não um sistema apostilado privado. A organização dos conteúdos pode variar conforme a etapa e as orientações oficiais.'},
+
+  'Sistema de Ensino Público Estadual Paulista':{
+
+    official:true,
+
+    description:
+      'Rede pública estadual de ensino de São Paulo, orientada pelo Currículo Paulista e pelas orientações da Secretaria da Educação do Estado de São Paulo.',
+
+    source:
+      'Secretaria da Educação do Estado de São Paulo',
+
+    subjects:[
+      'Língua Portuguesa',
+      'Matemática',
+      'Ciências',
+      'História',
+      'Geografia',
+      'Língua Inglesa'
+    ],
+
+    note:
+      'É uma rede pública estadual, não um sistema apostilado privado. A organização dos conteúdos pode variar conforme a etapa e as orientações oficiais.'
+
+  },
+
   'Não identificado':{
+
     official:false,
-    description:'O sistema de ensino desta escola ainda não foi confirmado.',
-    source:'Sem confirmação',
+
+    description:
+      'O sistema de ensino desta escola ainda não foi confirmado.',
+
+    source:
+      'Sem confirmação',
+
     subjects:[],
-    note:'O InspiRED não vai inventar o sistema. A escola/rede precisa fornecer essa informação.'
+
+    note:
+      'O InspiRED não vai inventar o sistema. A escola/rede precisa fornecer essa informação.'
+
   }
+
 };
 
 const curriculum={
- '6º ano':{Matemática:['Números naturais e operações','Frações e números decimais','Geometria','Grandezas e medidas'],Português:['Leitura e interpretação','Gêneros textuais','Classes de palavras','Produção textual'],Ciências:['Matéria e energia','Seres vivos','Terra e Universo'],História:['Antiguidade','Idade Média','Povos e culturas'],Geografia:['Cartografia','Paisagens e espaço geográfico','Sociedade e natureza']},
- '7º ano':{Matemática:['Números inteiros e racionais','Razão e proporção','Álgebra','Geometria'],Português:['Gêneros textuais','Sintaxe','Coesão e coerência','Literatura'],Ciências:['Ecossistemas','Ser humano e saúde','Máquinas e energia'],História:['Mundo moderno','Colonização','Brasil colonial','Capitanias hereditárias'],Geografia:['Brasil: território e população','Urbanização','Recursos naturais']},
- '8º ano':{Matemática:['Potenciação e radiciação','Equações','Sistemas','Geometria'],Português:['Orações e períodos','Argumentação','Literatura','Interpretação'],Ciências:['Genética e evolução','Energia','Sistema solar'],História:['Revoluções','Brasil Império','Século XIX'],Geografia:['Globalização','Industrialização','América Latina']},
- '9º ano':{Matemática:['Números reais','Equações e funções','Geometria','Estatística e probabilidade'],Português:['Orações e sintaxe','Argumentação','Literatura','Interpretação de texto'],Ciências:['Química básica','Física básica','Evolução e genética'],História:['República','Guerras Mundiais','Brasil contemporâneo'],Geografia:['Globalização','Geopolítica','Economia mundial']},
- '1º ano do Ensino Médio':{Matemática:['Funções','Geometria analítica','Trigonometria','Estatística'],Português:['Literatura','Gramática','Redação','Interpretação'],Biologia:['Citologia','Genética','Ecologia'],História:['Antiguidade','Idade Média','Formação do mundo moderno'],Geografia:['Cartografia','Geopolítica','Espaço econômico']},
- '2º ano do Ensino Médio':{Matemática:['Funções exponenciais e logarítmicas','Progressões','Trigonometria','Análise combinatória'],Português:['Literatura brasileira','Sintaxe','Redação argumentativa'],Biologia:['Fisiologia','Genética','Ecologia'],História:['Brasil Império','República','Industrialização'],Geografia:['Urbanização','Industrialização','Globalização']},
- '3º ano do Ensino Médio':{Matemática:['Geometria','Probabilidade','Estatística','Revisão de funções'],Português:['Literatura','Redação','Interpretação','Gramática'],Biologia:['Genética','Evolução','Ecologia'],História:['Brasil contemporâneo','Século XX','Mundo contemporâneo'],Geografia:['Geopolítica','Economia','Meio ambiente']}
+
+'6º ano':{
+
+Matemática:[
+'Números naturais e operações',
+'Frações e números decimais',
+'Geometria',
+'Grandezas e medidas'
+],
+
+Português:[
+'Leitura e interpretação',
+'Gêneros textuais',
+'Classes de palavras',
+'Produção textual'
+],
+
+Ciências:[
+'Matéria e energia',
+'Seres vivos',
+'Terra e Universo'
+],
+
+História:[
+'Antiguidade',
+'Idade Média',
+'Povos e culturas'
+],
+
+Geografia:[
+'Cartografia',
+'Paisagens e espaço geográfico',
+'Sociedade e natureza'
+]
+
+},
+
+'7º ano':{
+
+Matemática:[
+'Números inteiros e racionais',
+'Razão e proporção',
+'Álgebra',
+'Geometria'
+],
+
+Português:[
+'Gêneros textuais',
+'Sintaxe',
+'Coesão e coerência',
+'Literatura'
+],
+
+Ciências:[
+'Ecossistemas',
+'Ser humano e saúde',
+'Máquinas e energia'
+],
+
+História:[
+'Mundo moderno',
+'Colonização',
+'Brasil colonial',
+'Capitanias hereditárias'
+],
+
+Geografia:[
+'Brasil: território e população',
+'Urbanização',
+'Recursos naturais'
+]
+
+},
+
+'8º ano':{
+
+Matemática:[
+'Potenciação e radiciação',
+'Equações',
+'Sistemas',
+'Geometria'
+],
+
+Português:[
+'Orações e períodos',
+'Argumentação',
+'Literatura',
+'Interpretação'
+],
+
+Ciências:[
+'Genética e evolução',
+'Energia',
+'Sistema solar'
+],
+
+História:[
+'Revoluções',
+'Brasil Império',
+'Século XIX'
+],
+
+Geografia:[
+'Globalização',
+'Industrialização',
+'América Latina'
+]
+
+},
+
+'9º ano':{
+
+Matemática:[
+'Números reais',
+'Equações e funções',
+'Geometria',
+'Estatística e probabilidade'
+],
+
+Português:[
+'Orações e sintaxe',
+'Argumentação',
+'Literatura',
+'Interpretação de texto'
+],
+
+Ciências:[
+'Química básica',
+'Física básica',
+'Evolução e genética'
+],
+
+História:[
+'República',
+'Guerras Mundiais',
+'Brasil contemporâneo'
+],
+
+Geografia:[
+'Globalização',
+'Geopolítica',
+'Economia mundial'
+]
+
+},
+
+'1º ano do Ensino Médio':{
+
+Matemática:[
+'Funções',
+'Geometria analítica',
+'Trigonometria',
+'Estatística'
+],
+
+Português:[
+'Literatura',
+'Gramática',
+'Redação',
+'Interpretação'
+],
+
+Biologia:[
+'Citologia',
+'Genética',
+'Ecologia'
+],
+
+História:[
+'Antiguidade',
+'Idade Média',
+'Formação do mundo moderno'
+],
+
+Geografia:[
+'Cartografia',
+'Geopolítica',
+'Espaço econômico'
+]
+
+},
+
+'2º ano do Ensino Médio':{
+
+Matemática:[
+'Funções exponenciais e logarítmicas',
+'Progressões',
+'Trigonometria',
+'Análise combinatória'
+],
+
+Português:[
+'Literatura brasileira',
+'Sintaxe',
+'Redação argumentativa'
+],
+
+Biologia:[
+'Fisiologia',
+'Genética',
+'Ecologia'
+],
+
+História:[
+'Brasil Império',
+'República',
+'Industrialização'
+],
+
+Geografia:[
+'Urbanização',
+'Industrialização',
+'Globalização'
+]
+
+},
+
+'3º ano do Ensino Médio':{
+
+Matemática:[
+'Geometria',
+'Probabilidade',
+'Estatística',
+'Revisão de funções'
+],
+
+Português:[
+'Literatura',
+'Redação',
+'Interpretação',
+'Gramática'
+],
+
+Biologia:[
+'Genética',
+'Evolução',
+'Ecologia'
+],
+
+História:[
+'Brasil contemporâneo',
+'Século XX',
+'Mundo contemporâneo'
+],
+
+Geografia:[
+'Geopolítica',
+'Economia',
+'Meio ambiente'
+]
+
+}
+
 };
 
 const systemKeywords=[
- ['Bernoulli Sistema de Ensino',['bernoulli']],
- ['FTD Sistema de Ensino',['ftd','ftd educação','saber mais']],
- ['SAS Educação',['sas educação','sas']],
- ['Poliedro',['poliedro']],
- ['Anglo',['anglo']],
- ['Positivo',['positivo','sistema positivo']]
+
+[
+'Bernoulli Sistema de Ensino',
+['bernoulli']
+],
+
+[
+'FTD Sistema de Ensino',
+['ftd','ftd educação','saber mais']
+],
+
+[
+'SAS Educação',
+['sas educação','sas']
+],
+
+[
+'Poliedro',
+['poliedro']
+],
+
+[
+'Anglo',
+['anglo']
+],
+
+[
+'Positivo',
+['positivo','sistema positivo']
+]
+
 ];
 
 function detectTeachingSystem(schoolName){
-  const n=normalizeSchoolName(schoolName);
-  for(const [key,system] of Object.entries(knownSchoolSystems)) if(n===key || n.includes(key)) return system;
-  for(const [system,keys] of systemKeywords){
-    if(keys.some(k=>n.includes(normalizeSchoolName(k)))) return system;
+
+  const n=
+    normalizeSchoolName(schoolName);
+
+  for(
+    const [key,system]
+    of Object.entries(knownSchoolSystems)
+  ){
+
+    if(
+      n===key ||
+      n.includes(key)
+    ){
+      return system;
+    }
+
   }
+
+  for(
+    const [system,keys]
+    of systemKeywords
+  ){
+
+    if(
+      keys.some(
+        k=>n.includes(
+          normalizeSchoolName(k)
+        )
+      )
+    ){
+      return system;
+    }
+
+  }
+
   return 'Não identificado';
+
 }
 
-function getUserSystem(u){if(u.systemOverride&&u.system)return u.system;const detected=detectTeachingSystem(u.school);return detected!=='Não identificado'?detected:(u.system||'Não identificado')}
+function getUserSystem(u){
 
-const subjectsIcons={Matemática:'∑',Português:'Aa',Ciências:'⚗',Biologia:'🧬',História:'⌛',Geografia:'◎'};
-let selectedSubject='';let quizIndex=0;let memoryState={};let tfIndex=0;let tfScore=0;
-const $=id=>document.getElementById(id);
-function toast(t){const x=$('toast');x.textContent=t;x.style.display='block';clearTimeout(window.toastT);window.toastT=setTimeout(()=>x.style.display='none',2600)}
-function openModal(id){$(id).style.display='flex'}function closeModal(id){$(id).style.display='none'}
-function openAccount(){const u=JSON.parse(localStorage.inspiredUser||'null');if(u)openProfileModal();else openModal('accountModal')}
-function openProfileModal(){const u=JSON.parse(localStorage.inspiredUser||'null');if(!u){openModal('accountModal');return}renderProfileModal(u);openModal('profileModal')}
-function renderProfileModal(u){$('profDisplay_name').textContent=u.name||'—';$('profDisplay_school').textContent=u.school||'—';$('profDisplay_grade').textContent=u.grade||'—';$('profDisplay_system').textContent=getUserSystem(u);['name','school','grade','system'].forEach(closeProfileEditor)}
+  if(
+    u.systemOverride &&
+    u.system
+  ){
+    return u.system;
+  }
+
+  const detected=
+    detectTeachingSystem(
+      u.school
+    );
+
+  return detected!=='Não identificado'
+    ? detected
+    : (u.system||'Não identificado');
+
+}
+
+const subjectsIcons={
+  Matemática:'∑',
+  Português:'Aa',
+  Ciências:'⚗',
+  Biologia:'🧬',
+  História:'⌛',
+  Geografia:'◎'
+};
+
+let selectedSubject='';
+
+let quizIndex=0;
+
+let memoryState={};
+
+let tfIndex=0;
+
+let tfScore=0;
+
+const $=
+  id=>document.getElementById(id);
+
+function toast(t){
+
+  const x=$('toast');
+
+  x.textContent=t;
+
+  x.style.display='block';
+
+  clearTimeout(
+    window.toastT
+  );
+
+  window.toastT=
+    setTimeout(
+      ()=>{
+        x.style.display='none';
+      },
+      2600
+    );
+
+}
+
+function openModal(id){
+  $(id).style.display='flex';
+}
+
+function closeModal(id){
+  $(id).style.display='none';
+}
+
+function openAccount(){
+
+  const u=
+    JSON.parse(
+      localStorage.inspiredUser||
+      'null'
+    );
+
+  if(u){
+    openProfileModal();
+  }else{
+    openModal(
+      'accountModal'
+    );
+  }
+
+}
+
+function openProfileModal(){
+
+  const u=
+    JSON.parse(
+      localStorage.inspiredUser||
+      'null'
+    );
+
+  if(!u){
+
+    openModal(
+      'accountModal'
+    );
+
+    return;
+
+  }
+
+  renderProfileModal(u);
+
+  openModal(
+    'profileModal'
+  );
+
+}
+
+function renderProfileModal(u){
+
+  $('profDisplay_name')
+    .textContent=
+      u.name||'—';
+
+  $('profDisplay_school')
+    .textContent=
+      u.school||'—';
+
+  $('profDisplay_grade')
+    .textContent=
+      u.grade||'—';
+
+  $('profDisplay_system')
+    .textContent=
+      getUserSystem(u);
+
+  [
+    'name',
+    'school',
+    'grade',
+    'system'
+  ].forEach(
+    closeProfileEditor
+  );
+
+}
+
 function logoutAccount(){
-  if(!confirm('Tem certeza que deseja sair da conta? Como este protótipo não usa senha, seus dados salvos neste navegador (nome, escola, série, XP e progresso) serão apagados e você voltará para a tela inicial.'))return;
-  localStorage.removeItem('inspiredUser');
-  document.body.classList.remove('hasAccount');
-  closeModal('profileModal');
-  $('app').style.display='none';
-  $('landing').style.display='';
-  $('accountBtn').textContent='Entrar';
-  selectedSubject='';
-  window.scrollTo({top:0,behavior:'smooth'});
-  toast('Você saiu da conta.');
-}
-function closeProfileEditor(field){const row=$('profRow_'+field);const extra=$('profEdit_'+field);if(extra)extra.remove();if(row)row.style.display='flex'}
-function editProfileField(field){['name','school','grade','system'].forEach(f=>{if(f!==field)closeProfileEditor(f)});if($('profEdit_'+field))return;const u=JSON.parse(localStorage.inspiredUser||'null');if(!u)return;const row=$('profRow_'+field);const wrap=document.createElement('div');wrap.className='profEditBox';wrap.id='profEdit_'+field;
- if(field==='name'){wrap.innerHTML=`<input class="input" id="profInput_name" value="${escapeHtml(u.name||'')}" placeholder="Como você quer ser chamado?"><div class="profEditActions"><button class="btn secondary" type="button" onclick="closeProfileEditor('name')">Cancelar</button><button class="btn primary" type="button" onclick="saveProfileName()">Salvar</button></div>`}
- else if(field==='grade'){const opts=['6º ano','7º ano','8º ano','9º ano','1º ano do Ensino Médio','2º ano do Ensino Médio','3º ano do Ensino Médio'];wrap.innerHTML=`<select class="select" id="profInput_grade">${opts.map(o=>`<option${o===u.grade?' selected':''}>${o}</option>`).join('')}</select><div class="profEditActions"><button class="btn secondary" type="button" onclick="closeProfileEditor('grade')">Cancelar</button><button class="btn primary" type="button" onclick="saveProfileGrade()">Salvar</button></div>`}
- else if(field==='system'){const opts=Object.keys(teachingSystems);const cur=getUserSystem(u);wrap.innerHTML=`<select class="select" id="profInput_system">${opts.map(o=>`<option${o===cur?' selected':''}>${o}</option>`).join('')}</select><div class="note">O sistema costuma ser identificado automaticamente pela escola. Só altere manualmente se tiver certeza.</div><div class="profEditActions"><button class="btn secondary" type="button" onclick="closeProfileEditor('system')">Cancelar</button><button class="btn primary" type="button" onclick="saveProfileSystem()">Salvar</button></div>`}
- else if(field==='school'){wrap.innerHTML=`<div class="searchRow"><input class="input" id="profSchoolSearch" placeholder="Nome da escola..."><button class="btn primary" type="button" onclick="profSearchSchools()">Buscar</button></div><div class="searchRow" style="margin-top:8px"><input class="input" id="profRegionSearch" placeholder="Região, cidade, bairro ou estado..."><button class="btn secondary" type="button" onclick="profSearchSchoolsByRegion()">🔎 Região</button></div><button class="btn secondary" type="button" style="margin-top:8px" onclick="profNearbySchools()">📍 Procurar perto de mim</button><div class="schoolResults" id="profSchoolResults"></div><div class="notFoundBox"><b>Não achou sua escola?</b><span>Informe o nome manualmente.</span><button class="btn secondary" type="button" onclick="profManualSchool()">➕ Informar manualmente</button></div><div class="profEditActions" style="margin-top:8px"><button class="btn secondary" type="button" onclick="closeProfileEditor('school')">Cancelar</button></div>`}
- row.style.display='none';row.insertAdjacentElement('afterend',wrap)}
-function saveProfileName(){const v=$('profInput_name').value.trim();if(!v){toast('Informe um nome.');return}updateUser(x=>x.name=v);const u=JSON.parse(localStorage.inspiredUser);$('userName').textContent=u.name;$('aiStudent').textContent=u.name;renderProfileModal(u);toast('Nome atualizado!')}
-function saveProfileGrade(){const v=$('profInput_grade').value;updateUser(x=>x.grade=v);const u=JSON.parse(localStorage.inspiredUser);$('aiGrade').textContent=u.grade;renderSubjects();renderCurriculum();renderProfileModal(u);toast('Série atualizada!')}
-function saveProfileSystem(){const v=$('profInput_system').value;updateUser(x=>{x.system=v;x.systemOverride=true});const u=JSON.parse(localStorage.inspiredUser);renderCurriculum();renderProfileModal(u);toast('Sistema de ensino atualizado!')}
-function profRenderSchools(data){if(!data.length){$('profSchoolResults').innerHTML='<div class="empty" style="padding:18px">Nenhuma escola encontrada.</div>';return}$('profSchoolResults').innerHTML=data.map((x,i)=>`<div class="schoolResult" onclick="profSelectSchool(${i})"><span class="si">🏫</span><main><b>${escapeHtml(x.display_name.split(',')[0])}</b><small>${escapeHtml(x.display_name.split(',').slice(1,3).join(', '))}</small></main>${x._distance?`<span class="distance">${x._distance.toFixed(1)} km</span>`:''}</div>`).join('');window.profSchoolData=data}
-async function profSearchSchools(){const q=$('profSchoolSearch').value.trim();if(!q){toast('Digite o nome da escola.');return}$('profSchoolResults').innerHTML='<div class="empty" style="padding:18px">Buscando escolas...</div>';try{let data=await fetchSchoolsQuery(q+' escola',12);if(!data.length)data=await fetchSchoolsQuery(q,12);profRenderSchools(data)}catch(e){$('profSchoolResults').innerHTML='<div class="empty" style="padding:18px">Não foi possível buscar agora.</div>'}}
-async function profSearchSchoolsByRegion(){const q=$('profRegionSearch').value.trim();if(!q){toast('Digite uma região, cidade, bairro ou estado.');return}$('profSchoolResults').innerHTML='<div class="empty" style="padding:18px">Procurando escolas na região...</div>';try{let data=await fetchSchoolsQuery('escolas em '+q,20);if(!data.length)data=await fetchSchoolsQuery('school '+q,20);profRenderSchools(data)}catch(e){$('profSchoolResults').innerHTML='<div class="empty" style="padding:18px">Não foi possível buscar essa região agora.</div>'}}
-function profNearbySchools(){if(!navigator.geolocation){toast('Seu navegador não oferece localização.');return}toast('Pedindo sua localização...');navigator.geolocation.getCurrentPosition(async pos=>{const {latitude,longitude}=pos.coords;$('profSchoolResults').innerHTML='<div class="empty" style="padding:18px">Procurando escolas próximas...</div>';try{const data=await fetchSchoolsQuery('escola',30);data.forEach(x=>x._distance=distance(latitude,longitude,+x.lat,+x.lon));data.sort((a,b)=>a._distance-b._distance);profRenderSchools(data)}catch(e){toast('Não foi possível buscar escolas agora.')}},()=>toast('Permita a localização para procurar escolas próximas.'))}
-function profApplySchool(name){const system=detectTeachingSystem(name);updateUser(x=>{x.school=name;x.system=system;delete x.systemOverride});const u=JSON.parse(localStorage.inspiredUser);$('schoolTitle').textContent=name;renderCurriculum();renderProfileModal(u);toast('Escola atualizada: '+name)}
-function profSelectSchool(i){const x=window.profSchoolData[i];const name=x.display_name.split(',')[0].trim();profApplySchool(name)}
-function profManualSchool(){const input=prompt('Digite o nome completo da sua escola:');if(!input||!input.trim())return;profApplySchool(input.trim())}
-let selectedAccountSchool='';
-function createAccount(){const name=$('nameInput').value.trim(),school=selectedAccountSchool,grade=$('gradeInput').value;if(!name||!school||!grade){toast('Informe seu nome, selecione uma escola e escolha sua série.');return}const system=detectTeachingSystem(school);localStorage.setItem('inspiredUser',JSON.stringify({name,school,grade,system,created:Date.now(),xp:0,questions:0,streak:0,progress:0}));closeModal('accountModal');showApp();toast('Conta criada! Tudo começa do zero.');}
-function renderAccountSchools(data){if(!data.length){$('accountSchoolResults').innerHTML='<div class="empty" style="padding:22px">Nenhuma escola encontrada.</div>';return}$('accountSchoolResults').innerHTML=data.map((x,i)=>`<div class="schoolResult" onclick="selectAccountSchool(${i})"><span class="si">🏫</span><main><b>${escapeHtml(x.display_name.split(',')[0])}</b><small>${escapeHtml(x.display_name.split(',').slice(1,3).join(', '))}</small></main>${x._distance?`<span class="distance">${x._distance.toFixed(1)} km</span>`:''}</div>`).join('');window.accountSchoolData=data}
-async function searchAccountSchools(){const q=$('accountSchoolSearch').value.trim();if(!q){toast('Digite o nome da escola.');return}$('accountSchoolResults').innerHTML='<div class="empty" style="padding:22px">Buscando escolas...</div>';try{let data=await fetchSchoolsQuery(q+' escola',12);if(!data.length)data=await fetchSchoolsQuery(q,12);renderAccountSchools(data)}catch(e){$('accountSchoolResults').innerHTML='<div class="empty" style="padding:22px">Não foi possível buscar agora. Tente pela região ou informe manualmente.</div>'}}
-async function searchAccountSchoolsByRegion(){const q=$('accountRegionSearch').value.trim();if(!q){toast('Digite uma região, cidade, bairro ou estado.');return}$('accountSchoolResults').innerHTML='<div class="empty" style="padding:22px">Procurando escolas na região...</div>';try{let data=await fetchSchoolsQuery('escolas em '+q,20);if(!data.length)data=await fetchSchoolsQuery('school '+q,20);renderAccountSchools(data)}catch(e){$('accountSchoolResults').innerHTML='<div class="empty" style="padding:22px">Não foi possível buscar essa região agora.</div>'}}
-async function nearbyAccountSchools(){if(!navigator.geolocation){toast('Seu navegador não oferece localização.');return}toast('Pedindo sua localização...');navigator.geolocation.getCurrentPosition(async pos=>{const {latitude,longitude}=pos.coords;$('accountSchoolResults').innerHTML='<div class="empty" style="padding:22px">Procurando escolas próximas...</div>';try{const data=await fetchSchoolsQuery('escola',30);data.forEach(x=>x._distance=distance(latitude,longitude,+x.lat,+x.lon));data.sort((a,b)=>a._distance-b._distance);renderAccountSchools(data)}catch(e){toast('Não foi possível buscar escolas agora.')}},()=>toast('Permita a localização para procurar escolas próximas.'))}
-function manualSchool(where){const input=prompt('Digite o nome completo da sua escola:');if(!input||!input.trim())return;const name=input.trim();if(where==='account'){selectedAccountSchool=name;window.selectedAccountSystem=detectTeachingSystem(name);$('selectedAccountSchool').style.display='block';$('selectedAccountSchool').innerHTML='🏫 <b>Escola informada:</b> '+escapeHtml(name)+'<br><span style="font-size:12px;color:var(--muted)">Sistema: <b>'+escapeHtml(window.selectedAccountSystem)+'</b></span>';toast('Escola informada manualmente!')}else{const system=detectTeachingSystem(name);updateUser(u=>{u.school=name;u.system=system});$('schoolTitle').textContent=name;toast('Escola informada: '+name);renderCurriculum()}}
-function selectAccountSchool(i){const x=window.accountSchoolData[i];selectedAccountSchool=x.display_name.split(',')[0].trim();window.selectedAccountSystem=detectTeachingSystem(selectedAccountSchool);$('selectedAccountSchool').style.display='block';$('selectedAccountSchool').innerHTML='🏫 <b>Escola selecionada:</b> '+escapeHtml(selectedAccountSchool)+'<br><span style="font-size:12px;color:var(--muted)">Sistema: <b>'+escapeHtml(window.selectedAccountSystem)+'</b></span>';$('accountSchoolResults').innerHTML='';toast('Escola selecionada!');}
 
-function showApp(){const u=JSON.parse(localStorage.inspiredUser||'null');if(!u)return;document.body.classList.add('hasAccount');$('landing').style.display='none';$('app').style.display='block';$('userName').textContent=u.name;$('accountBtn').textContent='Minha conta';$('aiStudent').textContent=u.name;$('aiGrade').textContent=u.grade;$('schoolTitle').textContent=u.school;const sys=getUserSystem(u);if($('systemName'))$('systemName').textContent=sys;if($('systemStatus'))$('systemStatus').textContent=sys==='Não identificado'?'Não confirmado':'Identificado';if($('systemDescription'))$('systemDescription').textContent=teachingSystems[sys]?.description||'';if($('systemNote'))$('systemNote').textContent=teachingSystems[sys]?.note||'';renderStats();renderSubjects();renderCurriculum();}
-function renderStats(){const u=JSON.parse(localStorage.inspiredUser);$('streak').textContent=u.streak||0;$('xp').textContent=u.xp||0;$('questions').textContent=u.questions||0;$('progress').textContent=(u.progress||0)+'%'}
-function updateUser(fn){const u=JSON.parse(localStorage.inspiredUser);fn(u);localStorage.inspiredUser=JSON.stringify(u);renderStats()}
-function renderSubjects(){const u=JSON.parse(localStorage.inspiredUser);const data=curriculum[u.grade]||{};$('subjects').innerHTML=Object.entries(data).map(([s,topics])=>`<article class="card subject"><div class="subjectIcon">${subjectsIcons[s]||'📚'}</div><h3>${s}</h3><p>${topics.length} tópicos disponíveis para sua série.</p><button onclick="chooseSubject('${s.replace(/'/g,"\\'")}')">Estudar ${s} →</button></article>`).join('')}
-function renderCurriculum(){
- const u=JSON.parse(localStorage.inspiredUser);const data=curriculum[u.grade]||{};const sys=getUserSystem(u);const info=teachingSystems[sys]||teachingSystems['Não identificado'];
- let out=`<div class="systemBox"><div class="systemTop"><div><div class="systemName" id="systemName">${escapeHtml(sys)}</div><div class="muted" id="systemDescription" style="font-size:12px">${escapeHtml(info.description)}</div></div><span class="systemStatus" id="systemStatus">${sys==='Não identificado'?'Não confirmado':'Identificado'}</span></div><div class="sourceNote">Fonte/contexto: ${escapeHtml(info.source)}. ${escapeHtml(info.note)}</div></div>`;
- out+=Object.entries(data).map(([s,topics])=>`<div style="margin-top:15px;margin-bottom:15px"><b>${s}</b><div class="chips" style="margin-top:7px">${topics.map(t=>`<span class="chip">${t}</span>`).join('')}</div></div>`).join('');
- $('curriculum').innerHTML=out||'<div class="empty">Não há currículo cadastrado para esta série.</div>';
-}
-function chooseSubject(s){selectedSubject=s;$('aiInput').placeholder='Pergunte sobre '+s+'...';$('messages').innerHTML=`<div class="msg aiMsg">Vamos estudar <b>${s}</b>. Sua série é ${JSON.parse(localStorage.inspiredUser).grade}. Pergunte sobre um dos tópicos ou peça um exercício.</div>`;location.hash='ia';setTimeout(()=>$('aiInput').focus(),250)}
-function quickPrompt(t){$('aiInput').value=t;sendAI()}
-function formatInlineMarkdown(text){
-  let s=String(text||'');
-  const code=[];
-  s=s.replace(/`([^`\n]+)`/g,(_,x)=>{const i=code.push('<code>'+x+'</code>')-1;return '\u0000CODE'+i+'\u0000'});
-  s=s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
-  s=s.replace(/__(.+?)__/g,'<strong>$1</strong>');
-  s=s.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g,'<em>$1</em>');
-  s=s.replace(/(?<!_)_([^_\n]+)_(?!_)/g,'<em>$1</em>');
-  s=s.replace(/\u0000CODE(\d+)\u0000/g,(_,i)=>code[Number(i)]||'');
-  return s;
-}
-function formatAIText(text){
-  const raw=String(text||'').replace(/\r\n?/g,'\n');
-  const fenced=[];
-  const withTokens=raw.replace(/```(?:[a-zA-Z0-9_+-]+)?\n?([\s\S]*?)```/g,(_,code)=>{
-    const i=fenced.push('<pre><code>'+escapeHtml(code.replace(/\n$/,''))+'</code></pre>')-1;
-    return '\u0000FENCE'+i+'\u0000';
+  if(
+    !confirm(
+      'Tem certeza que deseja sair da conta? Como este protótipo não usa senha, seus dados salvos neste navegador (nome, escola, série, XP e progresso) serão apagados e você voltará para a tela inicial.'
+    )
+  ){
+    return;
+  }
+
+  localStorage.removeItem(
+    'inspiredUser'
+  );
+
+  document.body.classList.remove(
+    'hasAccount'
+  );
+
+  closeModal(
+    'profileModal'
+  );
+
+  $('app').style.display=
+    'none';
+
+  $('landing').style.display=
+    '';
+
+  $('accountBtn').textContent=
+    'Entrar';
+
+  selectedSubject='';
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
   });
-  const safe=escapeHtml(withTokens);
-  const lines=safe.split('\n');
-  const out=[];
-  let paragraph=[];
-  const flushParagraph=()=>{
-    if(paragraph.length){out.push('<div class="md-p">'+formatInlineMarkdown(paragraph.join('<br>'))+'</div>');paragraph=[];}
-  };
-  for(let i=0;i<lines.length;i++){
-    const line=lines[i];
-    if(/^\u0000FENCE\d+\u0000$/.test(line)){flushParagraph();out.push(line);continue}
-    if(/^\s*$/.test(line)){flushParagraph();continue}
-    let m=line.match(/^###\s+(.+)$/);
-    if(m){flushParagraph();out.push('<h4 class="md-h3">'+formatInlineMarkdown(m[1])+'</h4>');continue}
-    m=line.match(/^##\s+(.+)$/);
-    if(m){flushParagraph();out.push('<h3 class="md-h2">'+formatInlineMarkdown(m[1])+'</h3>');continue}
-    m=line.match(/^#\s+(.+)$/);
-    if(m){flushParagraph();out.push('<h2 class="md-h1">'+formatInlineMarkdown(m[1])+'</h2>');continue}
-    if(/^\s*(---+|___+|\*\*\*+)\s*$/.test(line)){flushParagraph();out.push('<hr>');continue}
-    if(/^>\s?/.test(line)){
-      flushParagraph();
-      const q=[];
-      while(i<lines.length && /^>\s?/.test(lines[i])){q.push(lines[i].replace(/^>\s?/,''));i++;}
-      i--;
-      out.push('<blockquote>'+formatInlineMarkdown(q.join('<br>'))+'</blockquote>');
-      continue;
-    }
-    if(/^\s*[-*]\s+/.test(line)){
-      flushParagraph();
-      const items=[];
-      while(i<lines.length && /^\s*[-*]\s+/.test(lines[i])){items.push(lines[i].replace(/^\s*[-*]\s+/,''));i++;}
-      i--;
-      out.push('<ul>'+items.map(x=>'<li>'+formatInlineMarkdown(x)+'</li>').join('')+'</ul>');
-      continue;
-    }
-    if(/^\s*\d+[.)]\s+/.test(line)){
-      flushParagraph();
-      const items=[];
-      while(i<lines.length && /^\s*\d+[.)]\s+/.test(lines[i])){items.push(lines[i].replace(/^\s*\d+[.)]\s+/,''));i++;}
-      i--;
-      out.push('<ol>'+items.map(x=>'<li>'+formatInlineMarkdown(x)+'</li>').join('')+'</ol>');
-      continue;
-    }
-    paragraph.push(line);
-  }
-  flushParagraph();
-  return out.join('')
-    .replace(/\u0000FENCE(\d+)\u0000/g,(_,i)=>fenced[Number(i)]||'');
+
+  toast(
+    'Você saiu da conta.'
+  );
+
 }
-function addMsg(text,cls){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=formatAIText(text);$('messages').appendChild(d);$('messages').scrollTop=$('messages').scrollHeight}
-const GEMINI_MODEL='gemini-3.1-flash-lite';
-const GEMINI_ENDPOINT='https://generativelanguage.googleapis.com/v1beta/interactions';
-const GEMINI_API_KEY='AQ.Ab8RN6KrlanhtNEmdmySzpJwJDBinPa6qrK8MroDlYuunC071Q';
-function getGeminiKey(){return GEMINI_API_KEY}
+
+function closeProfileEditor(field){
+
+  const row=
+    $('profRow_'+field);
+
+  const extra=
+    $('profEdit_'+field);
+
+  if(extra){
+    extra.remove();
+  }
+
+  if(row){
+    row.style.display='flex';
+  }
+
+}
+
+function editProfileField(field){
+
+[
+'name',
+'school',
+'grade',
+'system'
+].forEach(
+f=>{
+if(f!==field){
+closeProfileEditor(f);
+}
+}
+);
+
+if(
+$('profEdit_'+field)
+){
+return;
+}
+
+const u=
+JSON.parse(
+localStorage.inspiredUser||
+'null'
+);
+
+if(!u){
+return;
+}
+
+const row=
+$('profRow_'+field);
+
+const wrap=
+document.createElement('div');
+
+wrap.className=
+'profEditBox';
+
+wrap.id=
+'profEdit_'+field;
+
+if(field==='name'){
+
+wrap.innerHTML=`
+<input
+class="input"
+id="profInput_name"
+value="${escapeHtml(u.name||'')}"
+placeholder="Como você quer ser chamado?"
+>
+
+<div class="profEditActions">
+
+<button
+class="btn secondary"
+type="button"
+onclick="closeProfileEditor('name')"
+>
+Cancelar
+</button>
+
+<button
+class="btn primary"
+type="button"
+onclick="saveProfileName()"
+>
+Salvar
+</button>
+
+</div>
+`;
+
+}
+
+else if(field==='grade'){
+
+const opts=[
+'6º ano',
+'7º ano',
+'8º ano',
+'9º ano',
+'1º ano do Ensino Médio',
+'2º ano do Ensino Médio',
+'3º ano do Ensino Médio'
+];
+
+wrap.innerHTML=`
+<select
+class="select"
+id="profInput_grade"
+>
+${opts.map(
+o=>`
+<option${
+o===u.grade
+?' selected'
+:''
+}>
+${o}
+</option>
+`
+).join('')}
+</select>
+
+<div class="profEditActions">
+
+<button
+class="btn secondary"
+type="button"
+onclick="closeProfileEditor('grade')"
+>
+Cancelar
+</button>
+
+<button
+class="btn primary"
+type="button"
+onclick="saveProfileGrade()"
+>
+Salvar
+</button>
+
+</div>
+`;
+
+}
+
+else if(field==='system'){
+
+const opts=
+Object.keys(
+teachingSystems
+);
+
+const cur=
+getUserSystem(u);
+
+wrap.innerHTML=`
+<select
+class="select"
+id="profInput_system"
+>
+${opts.map(
+o=>`
+<option${
+o===cur
+?' selected'
+:''
+}>
+${o}
+</option>
+`
+).join('')}
+</select>
+
+<div class="note">
+O sistema costuma ser identificado automaticamente pela escola.
+Só altere manualmente se tiver certeza.
+</div>
+
+<div class="profEditActions">
+
+<button
+class="btn secondary"
+type="button"
+onclick="closeProfileEditor('system')"
+>
+Cancelar
+</button>
+
+<button
+class="btn primary"
+type="button"
+onclick="saveProfileSystem()"
+>
+Salvar
+</button>
+
+</div>
+`;
+
+}
+
+else if(field==='school'){
+
+wrap.innerHTML=`
+
+<div class="searchRow">
+
+<input
+class="input"
+id="profSchoolSearch"
+placeholder="Nome da escola..."
+>
+
+<button
+class="btn primary"
+type="button"
+onclick="profSearchSchools()"
+>
+Buscar
+</button>
+
+</div>
+
+<div
+class="searchRow"
+style="margin-top:8px"
+>
+
+<input
+class="input"
+id="profRegionSearch"
+placeholder="Região, cidade, bairro ou estado..."
+>
+
+<button
+class="btn secondary"
+type="button"
+onclick="profSearchSchoolsByRegion()"
+>
+🔎 Região
+</button>
+
+</div>
+
+<button
+class="btn secondary"
+type="button"
+style="margin-top:8px"
+onclick="profNearbySchools()"
+>
+📍 Procurar perto de mim
+</button>
+
+<div
+class="schoolResults"
+id="profSchoolResults"
+></div>
+
+<div class="notFoundBox">
+
+<b>
+Não achou sua escola?
+</b>
+
+<span>
+Informe o nome manualmente.
+</span>
+
+<button
+class="btn secondary"
+type="button"
+onclick="profManualSchool()"
+>
+➕ Informar manualmente
+</button>
+
+</div>
+
+<div
+class="profEditActions"
+style="margin-top:8px"
+>
+
+<button
+class="btn secondary"
+type="button"
+onclick="closeProfileEditor('school')"
+>
+Cancelar
+</button>
+
+</div>
+`;
+
+}
+
+row.style.display='none';
+
+row.insertAdjacentElement(
+'afterend',
+wrap
+);
+
+}
+
+function saveProfileName(){
+
+const v=
+$('profInput_name')
+.value
+.trim();
+
+if(!v){
+
+toast(
+'Informe um nome.'
+);
+
+return;
+
+}
+
+updateUser(
+x=>x.name=v
+);
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+$('userName')
+.textContent=
+u.name;
+
+$('aiStudent')
+.textContent=
+u.name;
+
+renderProfileModal(u);
+
+toast(
+'Nome atualizado!'
+);
+
+}
+
+function saveProfileGrade(){
+
+const v=
+$('profInput_grade')
+.value;
+
+updateUser(
+x=>x.grade=v
+);
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+$('aiGrade')
+.textContent=
+u.grade;
+
+renderSubjects();
+
+renderCurriculum();
+
+renderProfileModal(u);
+
+toast(
+'Série atualizada!'
+);
+
+}
+
+function saveProfileSystem(){
+
+const v=
+$('profInput_system')
+.value;
+
+updateUser(
+x=>{
+x.system=v;
+x.systemOverride=true;
+}
+);
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+renderCurriculum();
+
+renderProfileModal(u);
+
+toast(
+'Sistema de ensino atualizado!'
+);
+
+}
+
+function profRenderSchools(data){
+
+if(!data.length){
+
+$('profSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:18px">Nenhuma escola encontrada.</div>';
+
+return;
+
+}
+
+$('profSchoolResults')
+.innerHTML=
+data.map(
+(x,i)=>`
+<div
+class="schoolResult"
+onclick="profSelectSchool(${i})"
+>
+
+<span class="si">
+🏫
+</span>
+
+<main>
+
+<b>
+${escapeHtml(
+x.display_name.split(',')[0]
+)}
+</b>
+
+<small>
+${escapeHtml(
+x.display_name
+.split(',')
+.slice(1,3)
+.join(', ')
+)}
+</small>
+
+</main>
+
+${
+x._distance
+?`
+<span class="distance">
+${x._distance.toFixed(1)} km
+</span>
+`
+:''
+}
+
+</div>
+`
+).join('');
+
+window.profSchoolData=
+data;
+
+}
+
+async function profSearchSchools(){
+
+const q=
+$('profSchoolSearch')
+.value
+.trim();
+
+if(!q){
+
+toast(
+'Digite o nome da escola.'
+);
+
+return;
+
+}
+
+$('profSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:18px">Buscando escolas...</div>';
+
+try{
+
+let data=
+await fetchSchoolsQuery(
+q+' escola',
+12
+);
+
+if(!data.length){
+
+data=
+await fetchSchoolsQuery(
+q,
+12
+);
+
+}
+
+profRenderSchools(data);
+
+}
+catch(e){
+
+$('profSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:18px">Não foi possível buscar agora.</div>';
+
+}
+
+}
+
+async function profSearchSchoolsByRegion(){
+
+const q=
+$('profRegionSearch')
+.value
+.trim();
+
+if(!q){
+
+toast(
+'Digite uma região, cidade, bairro ou estado.'
+);
+
+return;
+
+}
+
+$('profSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:18px">Procurando escolas na região...</div>';
+
+try{
+
+let data=
+await fetchSchoolsQuery(
+'escolas em '+q,
+20
+);
+
+if(!data.length){
+
+data=
+await fetchSchoolsQuery(
+'school '+q,
+20
+);
+
+}
+
+profRenderSchools(data);
+
+}
+catch(e){
+
+$('profSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:18px">Não foi possível buscar essa região agora.</div>';
+
+}
+
+}
+
+function profNearbySchools(){
+
+if(
+!navigator.geolocation
+){
+
+toast(
+'Seu navegador não oferece localização.'
+);
+
+return;
+
+}
+
+toast(
+'Pedindo sua localização...'
+);
+
+navigator.geolocation
+.getCurrentPosition(
+
+async pos=>{
+
+const {
+latitude,
+longitude
+}=
+pos.coords;
+
+$('profSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:18px">Procurando escolas próximas...</div>';
+
+try{
+
+const data=
+await fetchSchoolsQuery(
+'escola',
+30
+);
+
+data.forEach(
+x=>
+x._distance=
+distance(
+latitude,
+longitude,
++x.lat,
++x.lon
+)
+);
+
+data.sort(
+(a,b)=>
+a._distance-
+b._distance
+);
+
+profRenderSchools(data);
+
+}
+catch(e){
+
+toast(
+'Não foi possível buscar escolas agora.'
+);
+
+}
+
+},
+
+()=>toast(
+'Permita a localização para procurar escolas próximas.'
+)
+
+);
+
+}
+
+function profApplySchool(name){
+
+const system=
+detectTeachingSystem(name);
+
+updateUser(
+x=>{
+x.school=name;
+x.system=system;
+delete x.systemOverride;
+}
+);
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+$('schoolTitle')
+.textContent=
+name;
+
+renderCurriculum();
+
+renderProfileModal(u);
+
+toast(
+'Escola atualizada: '+name
+);
+
+}
+
+function profSelectSchool(i){
+
+const x=
+window.profSchoolData[i];
+
+const name=
+x.display_name
+.split(',')[0]
+.trim();
+
+profApplySchool(name);
+
+}
+
+function profManualSchool(){
+
+const input=
+prompt(
+'Digite o nome completo da sua escola:'
+);
+
+if(
+!input||
+!input.trim()
+){
+return;
+}
+
+profApplySchool(
+input.trim()
+);
+
+}
+
+let selectedAccountSchool='';
+
+function createAccount(){
+
+const name=
+$('nameInput')
+.value
+.trim();
+
+const school=
+selectedAccountSchool;
+
+const grade=
+$('gradeInput')
+.value;
+
+if(
+!name||
+!school||
+!grade
+){
+
+toast(
+'Informe seu nome, selecione uma escola e escolha sua série.'
+);
+
+return;
+
+}
+
+const system=
+detectTeachingSystem(
+school
+);
+
+localStorage.setItem(
+'inspiredUser',
+JSON.stringify({
+name,
+school,
+grade,
+system,
+created:Date.now(),
+xp:0,
+questions:0,
+streak:0,
+progress:0
+})
+);
+
+closeModal(
+'accountModal'
+);
+
+showApp();
+
+toast(
+'Conta criada! Tudo começa do zero.'
+);
+
+}
+
+function renderAccountSchools(data){
+
+if(!data.length){
+
+$('accountSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Nenhuma escola encontrada.</div>';
+
+return;
+
+}
+
+$('accountSchoolResults')
+.innerHTML=
+data.map(
+(x,i)=>`
+<div
+class="schoolResult"
+onclick="selectAccountSchool(${i})"
+>
+
+<span class="si">
+🏫
+</span>
+
+<main>
+
+<b>
+${escapeHtml(
+x.display_name.split(',')[0]
+)}
+</b>
+
+<small>
+${escapeHtml(
+x.display_name
+.split(',')
+.slice(1,3)
+.join(', ')
+)}
+</small>
+
+</main>
+
+${
+x._distance
+?`
+<span class="distance">
+${x._distance.toFixed(1)} km
+</span>
+`
+:''
+}
+
+</div>
+`
+).join('');
+
+window.accountSchoolData=
+data;
+
+}
+
+async function searchAccountSchools(){
+
+const q=
+$('accountSchoolSearch')
+.value
+.trim();
+
+if(!q){
+
+toast(
+'Digite o nome da escola.'
+);
+
+return;
+
+}
+
+$('accountSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Buscando escolas...</div>';
+
+try{
+
+let data=
+await fetchSchoolsQuery(
+q+' escola',
+12
+);
+
+if(!data.length){
+
+data=
+await fetchSchoolsQuery(
+q,
+12
+);
+
+}
+
+renderAccountSchools(data);
+
+}
+catch(e){
+
+$('accountSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Não foi possível buscar agora. Tente pela região ou informe manualmente.</div>';
+
+}
+
+}
+
+async function searchAccountSchoolsByRegion(){
+
+const q=
+$('accountRegionSearch')
+.value
+.trim();
+
+if(!q){
+
+toast(
+'Digite uma região, cidade, bairro ou estado.'
+);
+
+return;
+
+}
+
+$('accountSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Procurando escolas na região...</div>';
+
+try{
+
+let data=
+await fetchSchoolsQuery(
+'escolas em '+q,
+20
+);
+
+if(!data.length){
+
+data=
+await fetchSchoolsQuery(
+'school '+q,
+20
+);
+
+}
+
+renderAccountSchools(data);
+
+}
+catch(e){
+
+$('accountSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Não foi possível buscar essa região agora.</div>';
+
+}
+
+}
+
+async function nearbyAccountSchools(){
+
+if(
+!navigator.geolocation
+){
+
+toast(
+'Seu navegador não oferece localização.'
+);
+
+return;
+
+}
+
+toast(
+'Pedindo sua localização...'
+);
+
+navigator.geolocation
+.getCurrentPosition(
+
+async pos=>{
+
+const {
+latitude,
+longitude
+}=
+pos.coords;
+
+$('accountSchoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Procurando escolas próximas...</div>';
+
+try{
+
+const data=
+await fetchSchoolsQuery(
+'escola',
+30
+);
+
+data.forEach(
+x=>
+x._distance=
+distance(
+latitude,
+longitude,
++x.lat,
++x.lon
+)
+);
+
+data.sort(
+(a,b)=>
+a._distance-
+b._distance
+);
+
+renderAccountSchools(data);
+
+}
+catch(e){
+
+toast(
+'Não foi possível buscar escolas agora.'
+);
+
+}
+
+},
+
+()=>toast(
+'Permita a localização para procurar escolas próximas.'
+)
+
+);
+
+}
+
+function manualSchool(where){
+
+const input=
+prompt(
+'Digite o nome completo da sua escola:'
+);
+
+if(
+!input||
+!input.trim()
+){
+return;
+}
+
+const name=
+input.trim();
+
+if(
+where==='account'
+){
+
+selectedAccountSchool=
+name;
+
+window.selectedAccountSystem=
+detectTeachingSystem(
+name
+);
+
+$('selectedAccountSchool')
+.style.display=
+'block';
+
+$('selectedAccountSchool')
+.innerHTML=
+'🏫 <b>Escola informada:</b> '+
+escapeHtml(name)+
+'<br><span style="font-size:12px;color:var(--muted)">Sistema: <b>'+
+escapeHtml(
+window.selectedAccountSystem
+)+
+'</b></span>';
+
+toast(
+'Escola informada manualmente!'
+);
+
+}
+else{
+
+const system=
+detectTeachingSystem(name);
+
+updateUser(
+u=>{
+u.school=name;
+u.system=system;
+}
+);
+
+$('schoolTitle')
+.textContent=
+name;
+
+toast(
+'Escola informada: '+name
+);
+
+renderCurriculum();
+
+}
+
+}
+
+function selectAccountSchool(i){
+
+const x=
+window.accountSchoolData[i];
+
+selectedAccountSchool=
+x.display_name
+.split(',')[0]
+.trim();
+
+window.selectedAccountSystem=
+detectTeachingSystem(
+selectedAccountSchool
+);
+
+$('selectedAccountSchool')
+.style.display=
+'block';
+
+$('selectedAccountSchool')
+.innerHTML=
+'🏫 <b>Escola selecionada:</b> '+
+escapeHtml(
+selectedAccountSchool
+)+
+'<br><span style="font-size:12px;color:var(--muted)">Sistema: <b>'+
+escapeHtml(
+window.selectedAccountSystem
+)+
+'</b></span>';
+
+$('accountSchoolResults')
+.innerHTML=
+'';
+
+toast(
+'Escola selecionada!'
+);
+
+}
+
+function showApp(){
+
+const u=
+JSON.parse(
+localStorage.inspiredUser||
+'null'
+);
+
+if(!u){
+return;
+}
+
+document.body
+.classList.add(
+'hasAccount'
+);
+
+$('landing')
+.style.display=
+'none';
+
+$('app')
+.style.display=
+'block';
+
+$('userName')
+.textContent=
+u.name;
+
+$('accountBtn')
+.textContent=
+'Minha conta';
+
+$('aiStudent')
+.textContent=
+u.name;
+
+$('aiGrade')
+.textContent=
+u.grade;
+
+$('schoolTitle')
+.textContent=
+u.school;
+
+const sys=
+getUserSystem(u);
+
+if(
+$('systemName')
+){
+
+$('systemName')
+.textContent=
+sys;
+
+}
+
+if(
+$('systemStatus')
+){
+
+$('systemStatus')
+.textContent=
+sys==='Não identificado'
+?'Não confirmado'
+:'Identificado';
+
+}
+
+if(
+$('systemDescription')
+){
+
+$('systemDescription')
+.textContent=
+teachingSystems[sys]
+?.description||
+'';
+
+}
+
+if(
+$('systemNote')
+){
+
+$('systemNote')
+.textContent=
+teachingSystems[sys]
+?.note||
+'';
+
+}
+
+renderStats();
+
+renderSubjects();
+
+renderCurriculum();
+
+}
+
+function renderStats(){
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+$('streak')
+.textContent=
+u.streak||0;
+
+$('xp')
+.textContent=
+u.xp||0;
+
+$('questions')
+.textContent=
+u.questions||0;
+
+$('progress')
+.textContent=
+(u.progress||0)+'%';
+
+}
+
+function updateUser(fn){
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+fn(u);
+
+localStorage.inspiredUser=
+JSON.stringify(u);
+
+renderStats();
+
+}
+
+function renderSubjects(){
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+const data=
+curriculum[u.grade]||
+{};
+
+$('subjects')
+.innerHTML=
+Object.entries(data)
+.map(
+([s,topics])=>`
+<article class="card subject">
+
+<div class="subjectIcon">
+${subjectsIcons[s]||'📚'}
+</div>
+
+<h3>
+${s}
+</h3>
+
+<p>
+${topics.length}
+tópicos disponíveis para sua série.
+</p>
+
+<button
+onclick="chooseSubject('${s.replace(/'/g,"\\'")}')"
+>
+Estudar ${s} →
+</button>
+
+</article>
+`
+)
+.join('');
+
+}
+
+function renderCurriculum(){
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+const data=
+curriculum[u.grade]||
+{};
+
+const sys=
+getUserSystem(u);
+
+const info=
+teachingSystems[sys]||
+teachingSystems[
+'Não identificado'
+];
+
+let out=`
+<div class="systemBox">
+
+<div class="systemTop">
+
+<div>
+
+<div
+class="systemName"
+id="systemName"
+>
+${escapeHtml(sys)}
+</div>
+
+<div
+class="muted"
+id="systemDescription"
+style="font-size:12px"
+>
+${escapeHtml(
+info.description
+)}
+</div>
+
+</div>
+
+<span
+class="systemStatus"
+id="systemStatus"
+>
+${
+sys==='Não identificado'
+?'Não confirmado'
+:'Identificado'
+}
+</span>
+
+</div>
+
+<div class="sourceNote">
+Fonte/contexto:
+${escapeHtml(info.source)}.
+${escapeHtml(info.note)}
+</div>
+
+</div>
+`;
+
+out+=
+Object.entries(data)
+.map(
+([s,topics])=>`
+<div
+style="
+margin-top:15px;
+margin-bottom:15px
+"
+>
+
+<b>
+${s}
+</b>
+
+<div
+class="chips"
+style="margin-top:7px"
+>
+
+${topics.map(
+t=>`
+<span class="chip">
+${t}
+</span>
+`
+).join('')}
+
+</div>
+
+</div>
+`
+)
+.join('');
+
+$('curriculum')
+.innerHTML=
+out||
+'<div class="empty">Não há currículo cadastrado para esta série.</div>';
+
+}
+
+function chooseSubject(s){
+
+selectedSubject=s;
+
+$('aiInput')
+.placeholder=
+'Pergunte sobre '+s+'...';
+
+$('messages')
+.innerHTML=
+`
+<div class="msg aiMsg">
+Vamos estudar <b>${s}</b>.
+Sua série é ${
+JSON.parse(
+localStorage.inspiredUser
+).grade
+}.
+Pergunte sobre um dos tópicos
+ou peça um exercício.
+</div>
+`;
+
+location.hash=
+'ia';
+
+setTimeout(
+()=>
+$('aiInput').focus(),
+250
+);
+
+}
+
+function quickPrompt(t){
+
+$('aiInput')
+.value=
+t;
+
+sendAI();
+
+}
+
+function formatInlineMarkdown(text){
+
+let s=
+String(
+text||
+''
+);
+
+const code=[];
+
+s=s.replace(
+/`([^`\n]+)`/g,
+(_,x)=>{
+
+const i=
+code.push(
+'<code>'+x+'</code>'
+)-1;
+
+return '\u0000CODE'+i+'\u0000';
+
+}
+);
+
+s=s.replace(
+/\*\*(.+?)\*\*/g,
+'<strong>$1</strong>'
+);
+
+s=s.replace(
+/__(.+?)__/g,
+'<strong>$1</strong>'
+);
+
+s=s.replace(
+/(?<!\*)\*([^*\n]+)\*(?!\*)/g,
+'<em>$1</em>'
+);
+
+s=s.replace(
+/(?<!_)_([^_\n]+)_(?!_)/g,
+'<em>$1</em>'
+);
+
+s=s.replace(
+/\u0000CODE(\d+)\u0000/g,
+(_,i)=>
+code[Number(i)]||
+''
+);
+
+return s;
+
+}
+
+function formatAIText(text){
+
+const raw=
+String(
+text||
+''
+)
+.replace(
+/\r\n?/g,
+'\n'
+);
+
+const fenced=[];
+
+const withTokens=
+raw.replace(
+/```(?:[a-zA-Z0-9_+-]+)?\n?([\s\S]*?)```/g,
+(_,code)=>{
+
+const i=
+fenced.push(
+'<pre><code>'+
+escapeHtml(
+code.replace(
+/\n$/,
+''
+)
+)+
+'</code></pre>'
+)-1;
+
+return '\u0000FENCE'+i+'\u0000';
+
+}
+);
+
+const safe=
+escapeHtml(
+withTokens
+);
+
+const lines=
+safe.split('\n');
+
+const out=[];
+
+let paragraph=[];
+
+const flushParagraph=
+()=>{
+
+if(
+paragraph.length
+){
+
+out.push(
+'<div class="md-p">'+
+formatInlineMarkdown(
+paragraph.join(
+'<br>'
+)
+)+
+'</div>'
+);
+
+paragraph=[];
+
+}
+
+};
+
+for(
+let i=0;
+i<lines.length;
+i++
+){
+
+const line=
+lines[i];
+
+if(
+/^\u0000FENCE\d+\u0000$/
+.test(line)
+){
+
+flushParagraph();
+
+out.push(line);
+
+continue;
+
+}
+
+if(
+/^\s*$/
+.test(line)
+){
+
+flushParagraph();
+
+continue;
+
+}
+
+let m=
+line.match(
+/^###\s+(.+)$/
+);
+
+if(m){
+
+flushParagraph();
+
+out.push(
+'<h4 class="md-h3">'+
+formatInlineMarkdown(
+m[1]
+)+
+'</h4>'
+);
+
+continue;
+
+}
+
+m=
+line.match(
+/^##\s+(.+)$/
+);
+
+if(m){
+
+flushParagraph();
+
+out.push(
+'<h3 class="md-h2">'+
+formatInlineMarkdown(
+m[1]
+)+
+'</h3>'
+);
+
+continue;
+
+}
+
+m=
+line.match(
+/^#\s+(.+)$/
+);
+
+if(m){
+
+flushParagraph();
+
+out.push(
+'<h2 class="md-h1">'+
+formatInlineMarkdown(
+m[1]
+)+
+'</h2>'
+);
+
+continue;
+
+}
+
+if(
+/^\s*(---+|___+|\*\*\*+)\s*$/
+.test(line)
+){
+
+flushParagraph();
+
+out.push(
+'<hr>'
+);
+
+continue;
+
+}
+
+if(
+/^>\s?/
+.test(line)
+){
+
+flushParagraph();
+
+const q=[];
+
+while(
+i<lines.length &&
+/^>\s?/
+.test(
+lines[i]
+)
+){
+
+q.push(
+lines[i]
+.replace(
+/^>\s?/,
+''
+)
+);
+
+i++;
+
+}
+
+i--;
+
+out.push(
+'<blockquote>'+
+formatInlineMarkdown(
+q.join(
+'<br>'
+)
+)+
+'</blockquote>'
+);
+
+continue;
+
+}
+
+if(
+/^\s*[-*]\s+/
+.test(line)
+){
+
+flushParagraph();
+
+const items=[];
+
+while(
+i<lines.length &&
+/^\s*[-*]\s+/
+.test(
+lines[i]
+)
+){
+
+items.push(
+lines[i]
+.replace(
+/^\s*[-*]\s+/,
+''
+)
+);
+
+i++;
+
+}
+
+i--;
+
+out.push(
+'<ul>'+
+items.map(
+x=>
+'<li>'+
+formatInlineMarkdown(x)+
+'</li>'
+)
+.join('')+
+'</ul>'
+);
+
+continue;
+
+}
+
+if(
+/^\s*\d+[.)]\s+/
+.test(line)
+){
+
+flushParagraph();
+
+const items=[];
+
+while(
+i<lines.length &&
+/^\s*\d+[.)]\s+/
+.test(
+lines[i]
+)
+){
+
+items.push(
+lines[i]
+.replace(
+/^\s*\d+[.)]\s+/,
+''
+)
+);
+
+i++;
+
+}
+
+i--;
+
+out.push(
+'<ol>'+
+items.map(
+x=>
+'<li>'+
+formatInlineMarkdown(x)+
+'</li>'
+)
+.join('')+
+'</ol>'
+);
+
+continue;
+
+}
+
+paragraph.push(
+line
+);
+
+}
+
+flushParagraph();
+
+return out
+.join('')
+.replace(
+/\u0000FENCE(\d+)\u0000/g,
+(_,i)=>
+fenced[Number(i)]||
+''
+);
+
+}
+
+function addMsg(
+text,
+cls
+){
+
+const d=
+document.createElement(
+'div'
+);
+
+d.className=
+'msg '+cls;
+
+d.innerHTML=
+formatAIText(text);
+
+$('messages')
+.appendChild(d);
+
+$('messages')
+.scrollTop=
+$('messages')
+.scrollHeight;
+
+}
+
+/* ============================
+   GEMINI
+============================ */
+
+const GEMINI_MODEL=
+'gemini-3.1-flash-lite';
+
+const GEMINI_ENDPOINT=
+'https://generativelanguage.googleapis.com/v1beta/interactions';
+
+/*
+A chave NÃO fica publicada no GitHub.
+Ela fica salva apenas no navegador.
+*/
+
+function getGeminiKey(){
+
+return (
+localStorage.getItem(
+'inspiredGeminiKey'
+)||
+''
+).trim();
+
+}
+
 function configureGemini(){
-  const current=getGeminiKey();
-  const key=prompt('Cole sua chave da Gemini API. Ela ficará salva apenas neste navegador.',current?'Uma chave já está salva. Cole a nova chave para substituir:':'Cole aqui a chave criada no Google AI Studio:');
-  if(key===null)return;
-  const clean=key.trim();
-  if(!clean){localStorage.removeItem('inspiredGeminiKey');alert('Chave removida.');return}
-  localStorage.setItem('inspiredGeminiKey',clean);
-  alert('Chave da Gemini salva neste navegador! Agora você já pode conversar com a IA.');
+
+const current=
+getGeminiKey();
+
+const message=
+current
+?
+'Já existe uma chave salva neste navegador. Cole uma nova chave Gemini para substituir. Para remover, deixe vazio e confirme.'
+:
+'Cole sua chave da Gemini API criada no Google AI Studio. Ela ficará salva somente neste navegador:';
+
+const key=
+prompt(
+message,
+''
+);
+
+if(
+key===null
+){
+return false;
 }
+
+const clean=
+key.trim();
+
+if(!clean){
+
+localStorage.removeItem(
+'inspiredGeminiKey'
+);
+
+alert(
+'Chave da Gemini removida deste navegador.'
+);
+
+return false;
+
+}
+
+localStorage.setItem(
+'inspiredGeminiKey',
+clean
+);
+
+alert(
+'Chave da Gemini salva neste navegador! Agora você já pode conversar com a IA.'
+);
+
+return true;
+
+}
+
 function extractGeminiText(data){
-  if(data?.output_text)return data.output_text;
-  const steps=Array.isArray(data?.steps)?data.steps:[];
-  const texts=[];
-  for(const step of steps){
-    if(step?.type==='model_output'&&Array.isArray(step.content)){
-      for(const block of step.content){if(block?.type==='text'&&block.text)texts.push(block.text)}
-    }
-  }
-  return texts.join('\n\n').trim();
+
+if(
+data?.output_text
+){
+return data.output_text;
 }
-async function askGemini(q,u){
-  const key=getGeminiKey();
-  if(!key){configureGemini();if(!getGeminiKey())throw new Error('Configure a chave da Gemini API para usar a IA.');}
-  const grade=u.grade||'série não informada';
-  const subject=selectedSubject||'matéria geral';
-  const system=getUserSystem(u)||'Não identificado';
-  const topics=(curriculum[grade]&&curriculum[grade][subject])?curriculum[grade][subject].slice(0,12):[];
-  const systemInstruction=`Você é o tutor de estudos do InspiRED, uma plataforma escolar brasileira.\n\nAluno: ${u.name||'estudante'}\nSérie: ${grade}\nEscola: ${u.school||'não informada'}\nSistema de ensino: ${system}\nMatéria atual: ${subject}\nTópicos cadastrados para esta matéria: ${topics.join(', ')||'nenhum cadastrado'}\n\nExplique em português do Brasil, de forma clara, didática e adequada à idade/série do aluno. Incentive o raciocínio e não faça a atividade inteira quando o objetivo for ensinar. Pode explicar, resumir, criar exercícios e corrigir respostas. Não invente capítulos, páginas, apostilas ou conteúdo específico de uma escola/sistema de ensino. Se o aluno pedir algo que dependa de material específico que você não recebeu, diga claramente que precisa do conteúdo fornecido para ser fiel. Não finja ter acesso ao material da escola.`;
-  const history=[...document.querySelectorAll('#messages .msg')].slice(-8).map(el=>{const role=el.classList.contains('userMsg')?'Aluno':'Tutor';return role+': '+el.textContent.trim()}).join('\n\n');
-  const input=`Conversa recente:\n${history||'(início da conversa)'}\n\nNova pergunta do aluno:\n${q}`;
-  const res=await fetch(GEMINI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':getGeminiKey()},body:JSON.stringify({model:GEMINI_MODEL,system_instruction:systemInstruction,input,store:false,generation_config:{thinking_level:'low',max_output_tokens:800}})});
-  const data=await res.json().catch(()=>({}));
-  if(!res.ok){
-    const msg=data?.error?.message||('Erro HTTP '+res.status);
-    throw new Error(msg);
-  }
-  const text=extractGeminiText(data);
-  if(!text)throw new Error('A Gemini não retornou uma resposta de texto.');
-  return text;
+
+const steps=
+Array.isArray(
+data?.steps
+)
+?
+data.steps
+:
+[];
+
+const texts=[];
+
+for(
+const step
+of steps
+){
+
+if(
+step?.type===
+'model_output'
+&&
+Array.isArray(
+step.content
+)
+){
+
+for(
+const block
+of step.content
+){
+
+if(
+block?.type===
+'text'
+&&
+block.text
+){
+
+texts.push(
+block.text
+);
+
 }
+
+}
+
+}
+
+}
+
+return texts
+.join('\n\n')
+.trim();
+
+}
+
+async function askGemini(
+q,
+u
+){
+
+if(
+!getGeminiKey()
+){
+
+const configured=
+configureGemini();
+
+if(
+!configured||
+!getGeminiKey()
+){
+
+throw new Error(
+'Configure uma chave válida da Gemini API para usar a IA.'
+);
+
+}
+
+}
+
+const grade=
+u.grade||
+'série não informada';
+
+const subject=
+selectedSubject||
+'matéria geral';
+
+const system=
+getUserSystem(u)||
+'Não identificado';
+
+const topics=
+(
+curriculum[grade]
+&&
+curriculum[grade][subject]
+)
+?
+curriculum[grade][subject]
+.slice(
+0,
+12
+)
+:
+[];
+
+const systemInstruction=
+`Você é o tutor de estudos do InspiRED, uma plataforma escolar brasileira.
+
+Aluno: ${u.name||'estudante'}
+Série: ${grade}
+Escola: ${u.school||'não informada'}
+Sistema de ensino: ${system}
+Matéria atual: ${subject}
+Tópicos cadastrados para esta matéria: ${topics.join(', ')||'nenhum cadastrado'}
+
+Explique em português do Brasil, de forma clara, didática e adequada à idade/série do aluno.
+
+Incentive o raciocínio e não faça a atividade inteira quando o objetivo for ensinar.
+
+Pode explicar, resumir, criar exercícios e corrigir respostas.
+
+Não invente capítulos, páginas, apostilas ou conteúdo específico de uma escola/sistema de ensino.
+
+Se o aluno pedir algo que dependa de material específico que você não recebeu, diga claramente que precisa do conteúdo fornecido para ser fiel.
+
+Não finja ter acesso ao material da escola.`;
+
+const history=[
+...document.querySelectorAll(
+'#messages .msg'
+)
+]
+.slice(-8)
+.map(
+el=>{
+
+const role=
+el.classList.contains(
+'userMsg'
+)
+?
+'Aluno'
+:
+'Tutor';
+
+return role+
+': '+
+el.textContent.trim();
+
+}
+)
+.join('\n\n');
+
+const input=
+`Conversa recente:
+${history||'(início da conversa)'}
+
+Nova pergunta do aluno:
+${q}`;
+
+let res;
+
+try{
+
+res=
+await fetch(
+GEMINI_ENDPOINT,
+{
+
+method:'POST',
+
+headers:{
+'Content-Type':
+'application/json',
+
+'x-goog-api-key':
+getGeminiKey()
+},
+
+body:
+JSON.stringify({
+
+model:
+GEMINI_MODEL,
+
+system_instruction:
+systemInstruction,
+
+input,
+
+store:false,
+
+generation_config:{
+thinking_level:'low',
+max_output_tokens:800
+}
+
+})
+
+}
+);
+
+}
+catch(e){
+
+throw new Error(
+'Falha de conexão com a Gemini. Verifique sua internet e tente novamente.'
+);
+
+}
+
+const data=
+await res
+.json()
+.catch(
+()=>({})
+);
+
+if(!res.ok){
+
+if(
+res.status===401||
+res.status===403
+){
+
+localStorage.removeItem(
+'inspiredGeminiKey'
+);
+
+throw new Error(
+'A chave da Gemini foi recusada (HTTP '+
+res.status+
+'). Ela foi removida deste navegador. Tente novamente e cole uma chave nova e válida.'
+);
+
+}
+
+const msg=
+data?.error?.message||
+(
+'Erro HTTP '+
+res.status
+);
+
+throw new Error(msg);
+
+}
+
+const text=
+extractGeminiText(
+data
+);
+
+if(!text){
+
+throw new Error(
+'A Gemini não retornou uma resposta de texto.'
+);
+
+}
+
+return text;
+
+}
+
 async function sendAI(){
-  const input=$('aiInput'),q=input.value.trim();if(!q)return;
-  const u=JSON.parse(localStorage.inspiredUser||'null');if(!u){openAccount();return}
-  addMsg(q,'userMsg');input.value='';
-  const typing=document.createElement('div');typing.className='msg aiMsg typing';typing.textContent='Pensando...';$('messages').appendChild(typing);$('messages').scrollTop=$('messages').scrollHeight;
-  try{const answer=await askGemini(q,u);typing.remove();addMsg(answer,'aiMsg')}
-  catch(err){typing.remove();addMsg('⚠️ Não consegui falar com a Gemini agora.\n\n'+err.message,'aiMsg')}
+
+const input=
+$('aiInput');
+
+const q=
+input.value
+.trim();
+
+if(!q){
+return;
 }
+
+const u=
+JSON.parse(
+localStorage.inspiredUser||
+'null'
+);
+
+if(!u){
+
+openAccount();
+
+return;
+
+}
+
+addMsg(
+q,
+'userMsg'
+);
+
+input.value='';
+
+const typing=
+document.createElement(
+'div'
+);
+
+typing.className=
+'msg aiMsg typing';
+
+typing.textContent=
+'Pensando...';
+
+$('messages')
+.appendChild(
+typing
+);
+
+$('messages')
+.scrollTop=
+$('messages')
+.scrollHeight;
+
+try{
+
+const answer=
+await askGemini(
+q,
+u
+);
+
+typing.remove();
+
+addMsg(
+answer,
+'aiMsg'
+);
+
+}
+catch(err){
+
+typing.remove();
+
+addMsg(
+'⚠️ Não consegui falar com a Gemini agora.\n\n'+
+err.message,
+'aiMsg'
+);
+
+}
+
+}
+
+/* ============================
+   Tutor local
+============================ */
+
 function generateTutor(q,u){
- const l=q.toLowerCase();const grade=u.grade;const data=curriculum[grade]||{};const subject=selectedSubject||Object.keys(data)[0]||'a matéria';const system=getUserSystem(u);
- const systemLabel=system==='Não identificado'?'sistema de ensino ainda não confirmado':system;
- const context=`Contexto: ${grade} • ${subject} • ${systemLabel}.`;
- if(l.includes('capitania')||l.includes('capitanias hereditárias')){
-   return `${context}
+
+const l=
+q.toLowerCase();
+
+const grade=
+u.grade;
+
+const data=
+curriculum[grade]||
+{};
+
+const subject=
+selectedSubject||
+Object.keys(data)[0]||
+'a matéria';
+
+const system=
+getUserSystem(u);
+
+const systemLabel=
+system==='Não identificado'
+?
+'sistema de ensino ainda não confirmado'
+:
+system;
+
+const context=
+`Contexto: ${grade} • ${subject} • ${systemLabel}.`;
+
+if(
+l.includes('capitania')||
+l.includes('capitanias hereditárias')
+){
+
+return `${context}
 
 As Capitanias Hereditárias foram uma forma usada pela Coroa portuguesa, a partir de 1534, para organizar a ocupação e a administração do território da América portuguesa. O território foi dividido em grandes faixas entregues a donatários, que recebiam direitos e responsabilidades para promover o povoamento e a exploração econômica.
 
@@ -398,154 +5308,1724 @@ Elas não funcionaram todas da mesma maneira e várias tiveram dificuldades. Dua
 📌 Para a prova: lembre-se de três ideias — divisão do território, donatários e tentativa de ocupar/administrar a colônia.
 
 ⚠️ Esta explicação é histórica e geral. Para responder exatamente como está no capítulo do material ${systemLabel}, o InspiRED precisa ter acesso ao conteúdo autorizado daquele capítulo.`;
- }
- if(l.includes('exerc')||l.includes('quest')){
-   return `${context}
+
+}
+
+if(
+l.includes('exerc')||
+l.includes('quest')
+){
+
+return `${context}
 
 Vamos praticar. Escolha um dos tópicos disponíveis na sua série e eu monto uma questão, espero sua resposta e depois corrijo explicando o raciocínio.`;
- }
- if(l.includes('resum')){
-   const topics=data[subject]||[];
-   return `${context}
+
+}
+
+if(
+l.includes('resum')
+){
+
+const topics=
+data[subject]||
+[];
+
+return `${context}
 
 Resumo dos tópicos cadastrados para ${subject}:
-${topics.map((t,i)=>(i+1)+'. '+t).join('\n')}
+${topics.map(
+(t,i)=>
+(i+1)+
+'. '+
+t
+).join('\n')}
 
 Se você tiver o material da sua escola, posso usar o texto fornecido como base para fazer um resumo fiel ao capítulo.`;
- }
- if(l.includes('bimestre')||l.includes('capítulo')||l.includes('capitulo')){
-   return `${context}
+
+}
+
+if(
+l.includes('bimestre')||
+l.includes('capítulo')||
+l.includes('capitulo')
+){
+
+return `${context}
 
 Consigo trabalhar com uma estrutura como “3º bimestre • capítulo 07”, mas não vou inventar o que existe nesse capítulo. A numeração muda conforme a coleção, edição e série.
 
 Se o conteúdo autorizado do capítulo for fornecido ao InspiRED, a IA poderá responder às dúvidas usando esse material como fonte e indicar de qual capítulo veio a explicação.`;
- }
- if(l.includes('como')||l.includes('explique')||l.includes('o que é')||l.includes('oque é')||l.includes('por que')){
-   const topics=data[subject]||[];
-   return `${context}
+
+}
+
+if(
+l.includes('como')||
+l.includes('explique')||
+l.includes('o que é')||
+l.includes('oque é')||
+l.includes('por que')
+){
+
+const topics=
+data[subject]||
+[];
+
+return `${context}
 
 Vou explicar no nível da sua série e relacionar a dúvida aos tópicos cadastrados: ${topics.slice(0,5).join(', ')}.
 
 Se a pergunta estiver sobre um assunto específico, diga o termo exato. Se esse assunto estiver no material da escola, o modo ideal é a IA consultar o capítulo autorizado em vez de adivinhar.`;
- }
- return `${context}
+
+}
+
+return `${context}
 
 Entendi sua dúvida. Posso explicar, resumir, criar exercícios e corrigir suas respostas.
 
 Para ficar realmente fiel ao sistema de ensino da sua escola, o InspiRED precisa receber o conteúdo autorizado da coleção/portal usado por ela. Sem isso, vou usar conhecimento escolar geral e deixar claro quando não houver confirmação do capítulo.`;
+
 }
+
 function buildGameContext(u){
-  const grade=u.grade||'série não informada';
-  const subject=selectedSubject||Object.keys(curriculum[grade]||{})[0]||'conteúdo geral';
-  const topics=(curriculum[grade]&&curriculum[grade][subject])?curriculum[grade][subject]:[];
-  const history=[...document.querySelectorAll('#messages .msg')].slice(-10).map(el=>el.textContent.trim()).filter(Boolean).join(' | ');
-  return `Aluno do ${grade}. Matéria escolhida: ${subject}. Tópicos do currículo dessa matéria: ${topics.join(', ')||'não definidos'}.
+
+const grade=
+u.grade||
+'série não informada';
+
+const subject=
+selectedSubject||
+Object.keys(
+curriculum[grade]||
+{}
+)[0]||
+'conteúdo geral';
+
+const topics=
+(
+curriculum[grade]
+&&
+curriculum[grade][subject]
+)
+?
+curriculum[grade][subject]
+:
+[];
+
+const history=[
+...document.querySelectorAll(
+'#messages .msg'
+)
+]
+.slice(-10)
+.map(
+el=>
+el.textContent.trim()
+)
+.filter(Boolean)
+.join(' | ');
+
+return `Aluno do ${grade}. Matéria escolhida: ${subject}. Tópicos do currículo dessa matéria: ${topics.join(', ')||'não definidos'}.
 Conversa recente do aluno com o tutor de estudos (se ela mostrar um assunto específico, como "porcentagem", "frações", "capitanias hereditárias" etc., FOQUE as perguntas nesse assunto específico; se não houver nada específico, use os tópicos do currículo acima): ${history||'(o aluno ainda não conversou com o tutor)'}`;
+
 }
-function stripJsonFence(t){return String(t||'').trim().replace(/^```(?:json)?/i,'').replace(/```$/,'').trim()}
-async function generateQuizQuestions(u,count){
-  if(!getGeminiKey())return null;
-  try{
-    const context=buildGameContext(u);
-    const instruction=`Você cria questões de múltipla escolha para um app de estudos escolar brasileiro (InspiRED). Gere exatamente ${count} questões, no nível de dificuldade adequado à série do aluno, sobre o assunto indicado no contexto. Cada questão deve ter 4 alternativas plausíveis e apenas uma correta. Responda SOMENTE com um JSON válido, sem markdown, sem explicações, no formato exato: [{"q":"pergunta","o":["alternativa A","alternativa B","alternativa C","alternativa D"],"a":0}]. O campo "a" é o índice (0 a 3) da alternativa correta.`;
-    const res=await fetch(GEMINI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':getGeminiKey()},body:JSON.stringify({model:GEMINI_MODEL,system_instruction:instruction,input:context,store:false,generation_config:{thinking_level:'low',max_output_tokens:900}})});
-    const data=await res.json().catch(()=>({}));
-    if(!res.ok)return null;
-    const raw=JSON.parse(stripJsonFence(extractGeminiText(data)));
-    const clean=raw.filter(x=>x&&typeof x.q==='string'&&Array.isArray(x.o)&&x.o.length>=2&&Number.isInteger(x.a)&&x.a>=0&&x.a<x.o.length);
-    return clean.length?clean:null;
-  }catch(e){return null}
+
+function stripJsonFence(t){
+
+return String(
+t||
+''
+)
+.trim()
+.replace(
+/^```(?:json)?/i,
+''
+)
+.replace(
+/```$/,
+''
+)
+.trim();
+
 }
-async function generateTFStatements(u,count){
-  if(!getGeminiKey())return null;
-  try{
-    const context=buildGameContext(u);
-    const instruction=`Você cria afirmações de verdadeiro ou falso para um app de estudos escolar brasileiro (InspiRED). Gere exatamente ${count} afirmações curtas, no nível de dificuldade adequado à série do aluno, sobre o assunto indicado no contexto (misture afirmações verdadeiras e falsas). Responda SOMENTE com um JSON válido, sem markdown, sem explicações, no formato exato: [{"s":"afirmação","v":true}]. O campo "v" é true se a afirmação for verdadeira e false se for falsa.`;
-    const res=await fetch(GEMINI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':getGeminiKey()},body:JSON.stringify({model:GEMINI_MODEL,system_instruction:instruction,input:context,store:false,generation_config:{thinking_level:'low',max_output_tokens:700}})});
-    const data=await res.json().catch(()=>({}));
-    if(!res.ok)return null;
-    const raw=JSON.parse(stripJsonFence(extractGeminiText(data)));
-    const clean=raw.filter(x=>x&&typeof x.s==='string'&&typeof x.v==='boolean').map(x=>[x.s,x.v]);
-    return clean.length?clean:null;
-  }catch(e){return null}
+
+async function generateQuizQuestions(
+u,
+count
+){
+
+if(
+!getGeminiKey()
+){
+return null;
 }
-async function generateMemoryPairs(u,count){
-  if(!getGeminiKey())return null;
-  try{
-    const context=buildGameContext(u);
-    const instruction=`Você cria pares de "conceito" e "definição curta" para um jogo da memória de um app de estudos escolar brasileiro (InspiRED). Gere exatamente ${count} pares, no nível de dificuldade adequado à série do aluno, sobre o assunto indicado no contexto. As definições devem ser bem curtas (até 6 palavras) para caber em uma carta pequena. Responda SOMENTE com um JSON válido, sem markdown, sem explicações, no formato exato: [{"termo":"conceito","def":"definição curta"}].`;
-    const res=await fetch(GEMINI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':getGeminiKey()},body:JSON.stringify({model:GEMINI_MODEL,system_instruction:instruction,input:context,store:false,generation_config:{thinking_level:'low',max_output_tokens:700}})});
-    const data=await res.json().catch(()=>({}));
-    if(!res.ok)return null;
-    const raw=JSON.parse(stripJsonFence(extractGeminiText(data)));
-    const clean=raw.filter(x=>x&&typeof x.termo==='string'&&typeof x.def==='string').map(x=>[x.termo,x.def]);
-    return clean.length?clean:null;
-  }catch(e){return null}
+
+try{
+
+const context=
+buildGameContext(u);
+
+const instruction=
+`Você cria questões de múltipla escolha para um app de estudos escolar brasileiro (InspiRED). Gere exatamente ${count} questões, no nível de dificuldade adequado à série do aluno, sobre o assunto indicado no contexto. Cada questão deve ter 4 alternativas plausíveis e apenas uma correta. Responda SOMENTE com um JSON válido, sem markdown, sem explicações, no formato exato: [{"q":"pergunta","o":["alternativa A","alternativa B","alternativa C","alternativa D"],"a":0}]. O campo "a" é o índice (0 a 3) da alternativa correta.`;
+
+const res=
+await fetch(
+GEMINI_ENDPOINT,
+{
+
+method:'POST',
+
+headers:{
+'Content-Type':
+'application/json',
+
+'x-goog-api-key':
+getGeminiKey()
+},
+
+body:
+JSON.stringify({
+
+model:
+GEMINI_MODEL,
+
+system_instruction:
+instruction,
+
+input:
+context,
+
+store:false,
+
+generation_config:{
+thinking_level:'low',
+max_output_tokens:900
 }
-function noContentBlock(msg,modalId){return `<div class="empty" style="padding:22px">😕 ${msg}<br><br><button class="btn primary" type="button" onclick="closeModal('${modalId}');location.hash='ia'">Conversar com o tutor de IA</button></div>`}
-const defaultQuizBank=[{q:'Qual expressão representa uma função do 1º grau?',o:['f(x)=2x+3','f(x)=x²','f(x)=5','f(x)=1/x'],a:0},{q:'Qual é o resultado de 3 × 4 + 2?',o:['10','12','14','18'],a:2},{q:'Qual é a ideia principal de um texto?',o:['Um detalhe aleatório','A informação central do texto','A última palavra','O título sempre'],a:1}];
-let quizBank=defaultQuizBank;
+
+})
+
+}
+);
+
+const data=
+await res
+.json()
+.catch(
+()=>({})
+);
+
+if(!res.ok){
+return null;
+}
+
+const raw=
+JSON.parse(
+stripJsonFence(
+extractGeminiText(
+data
+)
+)
+);
+
+const clean=
+raw.filter(
+x=>
+x &&
+typeof x.q==='string' &&
+Array.isArray(x.o) &&
+x.o.length>=2 &&
+Number.isInteger(x.a) &&
+x.a>=0 &&
+x.a<x.o.length
+);
+
+return clean.length
+?
+clean
+:
+null;
+
+}
+catch(e){
+
+return null;
+
+}
+
+}
+
+async function generateTFStatements(
+u,
+count
+){
+
+if(
+!getGeminiKey()
+){
+return null;
+}
+
+try{
+
+const context=
+buildGameContext(u);
+
+const instruction=
+`Você cria afirmações de verdadeiro ou falso para um app de estudos escolar brasileiro (InspiRED). Gere exatamente ${count} afirmações curtas, no nível de dificuldade adequado à série do aluno, sobre o assunto indicado no contexto (misture afirmações verdadeiras e falsas). Responda SOMENTE com um JSON válido, sem markdown, sem explicações, no formato exato: [{"s":"afirmação","v":true}]. O campo "v" é true se a afirmação for verdadeira e false se for falsa.`;
+
+const res=
+await fetch(
+GEMINI_ENDPOINT,
+{
+
+method:'POST',
+
+headers:{
+'Content-Type':
+'application/json',
+
+'x-goog-api-key':
+getGeminiKey()
+},
+
+body:
+JSON.stringify({
+
+model:
+GEMINI_MODEL,
+
+system_instruction:
+instruction,
+
+input:
+context,
+
+store:false,
+
+generation_config:{
+thinking_level:'low',
+max_output_tokens:700
+}
+
+})
+
+}
+);
+
+const data=
+await res
+.json()
+.catch(
+()=>({})
+);
+
+if(!res.ok){
+return null;
+}
+
+const raw=
+JSON.parse(
+stripJsonFence(
+extractGeminiText(
+data
+)
+)
+);
+
+const clean=
+raw
+.filter(
+x=>
+x &&
+typeof x.s==='string' &&
+typeof x.v==='boolean'
+)
+.map(
+x=>[
+x.s,
+x.v
+]
+);
+
+return clean.length
+?
+clean
+:
+null;
+
+}
+catch(e){
+
+return null;
+
+}
+
+}
+
+async function generateMemoryPairs(
+u,
+count
+){
+
+if(
+!getGeminiKey()
+){
+return null;
+}
+
+try{
+
+const context=
+buildGameContext(u);
+
+const instruction=
+`Você cria pares de "conceito" e "definição curta" para um jogo da memória de um app de estudos escolar brasileiro (InspiRED). Gere exatamente ${count} pares, no nível de dificuldade adequado à série do aluno, sobre o assunto indicado no contexto. As definições devem ser bem curtas (até 6 palavras) para caber em uma carta pequena. Responda SOMENTE com um JSON válido, sem markdown, sem explicações, no formato exato: [{"termo":"conceito","def":"definição curta"}].`;
+
+const res=
+await fetch(
+GEMINI_ENDPOINT,
+{
+
+method:'POST',
+
+headers:{
+'Content-Type':
+'application/json',
+
+'x-goog-api-key':
+getGeminiKey()
+},
+
+body:
+JSON.stringify({
+
+model:
+GEMINI_MODEL,
+
+system_instruction:
+instruction,
+
+input:
+context,
+
+store:false,
+
+generation_config:{
+thinking_level:'low',
+max_output_tokens:700
+}
+
+})
+
+}
+);
+
+const data=
+await res
+.json()
+.catch(
+()=>({})
+);
+
+if(!res.ok){
+return null;
+}
+
+const raw=
+JSON.parse(
+stripJsonFence(
+extractGeminiText(
+data
+)
+)
+);
+
+const clean=
+raw
+.filter(
+x=>
+x &&
+typeof x.termo==='string' &&
+typeof x.def==='string'
+)
+.map(
+x=>[
+x.termo,
+x.def
+]
+);
+
+return clean.length
+?
+clean
+:
+null;
+
+}
+catch(e){
+
+return null;
+
+}
+
+}
+
+function noContentBlock(
+msg,
+modalId
+){
+
+return `
+<div
+class="empty"
+style="padding:22px"
+>
+😕 ${msg}
+<br><br>
+
+<button
+class="btn primary"
+type="button"
+onclick="closeModal('${modalId}');location.hash='ia'"
+>
+Conversar com o tutor de IA
+</button>
+
+</div>
+`;
+
+}
+
+const defaultQuizBank=[
+
+{
+q:'Qual expressão representa uma função do 1º grau?',
+o:[
+'f(x)=2x+3',
+'f(x)=x²',
+'f(x)=5',
+'f(x)=1/x'
+],
+a:0
+},
+
+{
+q:'Qual é o resultado de 3 × 4 + 2?',
+o:[
+'10',
+'12',
+'14',
+'18'
+],
+a:2
+},
+
+{
+q:'Qual é a ideia principal de um texto?',
+o:[
+'Um detalhe aleatório',
+'A informação central do texto',
+'A última palavra',
+'O título sempre'
+],
+a:1
+}
+
+];
+
+let quizBank=
+defaultQuizBank;
+
 async function openQuiz(){
-  const u=JSON.parse(localStorage.inspiredUser||'null');if(!u){openAccount();return}
-  quizIndex=0;openModal('quizModal');
-  $('quizTitle').textContent='Preparando...';$('quizQuestion').textContent='Gerando perguntas com a IA sobre o que você estudou agora...';$('quizOptions').innerHTML='';$('quizResult').textContent='';
-  const generated=await generateQuizQuestions(u,5);
-  if(!generated){
-    $('quizTitle').textContent='Sem conteúdo ainda';$('quizQuestion').textContent='';
-    $('quizOptions').innerHTML=noContentBlock('Não foi possível gerar. Não temos conteúdo recente com o tutor de IA — converse com ele sobre uma matéria e tente de novo.','quizModal');
-    return;
-  }
-  quizBank=generated;
-  loadQuiz();
+
+const u=
+JSON.parse(
+localStorage.inspiredUser||
+'null'
+);
+
+if(!u){
+
+openAccount();
+
+return;
+
 }
-function loadQuiz(){const x=quizBank[quizIndex%quizBank.length];$('quizTitle').textContent='Questão '+(quizIndex+1);$('quizQuestion').textContent=x.q;$('quizOptions').innerHTML=x.o.map((o,i)=>`<button onclick="answerQuiz(${i},${x.a})">${String.fromCharCode(65+i)}) ${o}</button>`).join('');$('quizResult').textContent=''}
-function answerQuiz(i,a){if(i===a){updateUser(u=>{u.xp=(u.xp||0)+100;u.questions=(u.questions||0)+1;u.progress=Math.min(100,Math.round(((u.questions||0)/20)*100))});$('quizResult').textContent='🎉 Acertou! +100 XP';setTimeout(()=>{quizIndex++;loadQuiz()},800)}else{$('quizResult').textContent='❌ Ainda não. Tente outra alternativa.'}}
-const defaultMemoryPairs=[['Função','Relação entre grandezas'],['Raiz','Valor que zera a função'],['Texto','Conjunto organizado de ideias'],['Mapa','Representação do espaço']];
+
+quizIndex=0;
+
+openModal(
+'quizModal'
+);
+
+$('quizTitle')
+.textContent=
+'Preparando...';
+
+$('quizQuestion')
+.textContent=
+'Gerando perguntas com a IA sobre o que você estudou agora...';
+
+$('quizOptions')
+.innerHTML=
+'';
+
+$('quizResult')
+.textContent=
+'';
+
+const generated=
+await generateQuizQuestions(
+u,
+5
+);
+
+if(!generated){
+
+$('quizTitle')
+.textContent=
+'Sem conteúdo ainda';
+
+$('quizQuestion')
+.textContent=
+'';
+
+$('quizOptions')
+.innerHTML=
+noContentBlock(
+'Não foi possível gerar. Não temos conteúdo recente com o tutor de IA — converse com ele sobre uma matéria e tente de novo.',
+'quizModal'
+);
+
+return;
+
+}
+
+quizBank=
+generated;
+
+loadQuiz();
+
+}
+
+function loadQuiz(){
+
+const x=
+quizBank[
+quizIndex%
+quizBank.length
+];
+
+$('quizTitle')
+.textContent=
+'Questão '+
+(quizIndex+1);
+
+$('quizQuestion')
+.textContent=
+x.q;
+
+$('quizOptions')
+.innerHTML=
+x.o.map(
+(o,i)=>`
+<button
+onclick="answerQuiz(${i},${x.a})"
+>
+${String.fromCharCode(65+i)}) ${o}
+</button>
+`
+)
+.join('');
+
+$('quizResult')
+.textContent=
+'';
+
+}
+
+function answerQuiz(
+i,
+a
+){
+
+if(
+i===a
+){
+
+updateUser(
+u=>{
+
+u.xp=
+(u.xp||0)+
+100;
+
+u.questions=
+(u.questions||0)+
+1;
+
+u.progress=
+Math.min(
+100,
+Math.round(
+(
+(u.questions||0)/
+20
+)*
+100
+)
+);
+
+}
+);
+
+$('quizResult')
+.textContent=
+'🎉 Acertou! +100 XP';
+
+setTimeout(
+()=>{
+
+quizIndex++;
+
+loadQuiz();
+
+},
+800
+);
+
+}
+else{
+
+$('quizResult')
+.textContent=
+'❌ Ainda não. Tente outra alternativa.';
+
+}
+
+}
+
+const defaultMemoryPairs=[
+
+[
+'Função',
+'Relação entre grandezas'
+],
+
+[
+'Raiz',
+'Valor que zera a função'
+],
+
+[
+'Texto',
+'Conjunto organizado de ideias'
+],
+
+[
+'Mapa',
+'Representação do espaço'
+]
+
+];
+
 async function startMemory(){
-  const u=JSON.parse(localStorage.inspiredUser||'null');if(!u){openAccount();return}
-  openModal('memoryModal');$('memoryResult').textContent='';$('memoryGrid').innerHTML='<div class="empty" style="grid-column:1/-1;padding:22px">Gerando pares com a IA sobre o que você estudou agora...</div>';
-  const generated=await generateMemoryPairs(u,4);
-  if(!generated){
-    $('memoryGrid').innerHTML=`<div style="grid-column:1/-1">${noContentBlock('Não foi possível gerar. Não temos conteúdo recente com o tutor de IA — converse com ele sobre uma matéria e tente de novo.','memoryModal')}</div>`;
-    return;
-  }
-  const pairs=generated;
-  let cards=[];pairs.forEach((p,i)=>{cards.push({id:i,pair:i,text:p[0]},{id:i+pairs.length,pair:i,text:p[1]})});cards.sort(()=>Math.random()-.5);memoryState={cards,total:pairs.length,found:0,open:[],locked:false};$('memoryGrid').innerHTML=cards.map((c,i)=>`<button id="mc${i}" onclick="flipCard(${i})" style="height:75px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--text);font-weight:800">?</button>`).join('');
+
+const u=
+JSON.parse(
+localStorage.inspiredUser||
+'null'
+);
+
+if(!u){
+
+openAccount();
+
+return;
+
 }
-function flipCard(i){if(memoryState.locked||memoryState.open.includes(i)||memoryState.cards[i].found)return;const b=$('mc'+i),c=memoryState.cards[i];b.textContent=c.text;b.style.background='var(--redsoft)';memoryState.open.push(i);if(memoryState.open.length===2){memoryState.locked=true;const [a,bx]=memoryState.open;if(memoryState.cards[a].pair===memoryState.cards[bx].pair){memoryState.cards[a].found=memoryState.cards[bx].found=true;memoryState.found++;memoryState.open=[];memoryState.locked=false;updateUser(u=>u.xp=(u.xp||0)+50);if(memoryState.found===memoryState.total)$('memoryResult').textContent='🎉 Você encontrou todos os pares! +200 XP';}else{setTimeout(()=>{[$('mc'+a),$('mc'+bx)].forEach(x=>{x.textContent='?';x.style.background='var(--soft)'});memoryState.open=[];memoryState.locked=false},650)}}}
-const defaultTfBank=[['A água ferve a 100 °C ao nível do mar.',true],['O Brasil está localizado na Europa.',false],['Uma fração pode representar uma parte de um todo.',true],['A Terra é uma estrela.',false],['A leitura pode envolver inferências além das informações explícitas.',true]];
-let tfBank=defaultTfBank;
+
+openModal(
+'memoryModal'
+);
+
+$('memoryResult')
+.textContent=
+'';
+
+$('memoryGrid')
+.innerHTML=
+'<div class="empty" style="grid-column:1/-1;padding:22px">Gerando pares com a IA sobre o que você estudou agora...</div>';
+
+const generated=
+await generateMemoryPairs(
+u,
+4
+);
+
+if(!generated){
+
+$('memoryGrid')
+.innerHTML=
+`
+<div style="grid-column:1/-1">
+${noContentBlock(
+'Não foi possível gerar. Não temos conteúdo recente com o tutor de IA — converse com ele sobre uma matéria e tente de novo.',
+'memoryModal'
+)}
+</div>
+`;
+
+return;
+
+}
+
+const pairs=
+generated;
+
+let cards=[];
+
+pairs.forEach(
+(p,i)=>{
+
+cards.push(
+
+{
+id:i,
+pair:i,
+text:p[0]
+},
+
+{
+id:i+pairs.length,
+pair:i,
+text:p[1]
+}
+
+);
+
+}
+);
+
+cards.sort(
+()=>Math.random()-.5
+);
+
+memoryState={
+
+cards,
+
+total:pairs.length,
+
+found:0,
+
+open:[],
+
+locked:false
+
+};
+
+$('memoryGrid')
+.innerHTML=
+cards.map(
+(c,i)=>`
+<button
+id="mc${i}"
+onclick="flipCard(${i})"
+style="
+height:75px;
+border:1px solid var(--line);
+border-radius:12px;
+background:var(--soft);
+color:var(--text);
+font-weight:800
+"
+>
+?
+</button>
+`
+)
+.join('');
+
+}
+
+function flipCard(i){
+
+if(
+memoryState.locked||
+memoryState.open.includes(i)||
+memoryState.cards[i].found
+){
+return;
+}
+
+const b=
+$('mc'+i);
+
+const c=
+memoryState.cards[i];
+
+b.textContent=
+c.text;
+
+b.style.background=
+'var(--redsoft)';
+
+memoryState.open.push(i);
+
+if(
+memoryState.open.length===2
+){
+
+memoryState.locked=
+true;
+
+const [
+a,
+bx
+]=
+memoryState.open;
+
+if(
+memoryState.cards[a].pair===
+memoryState.cards[bx].pair
+){
+
+memoryState.cards[a].found=
+true;
+
+memoryState.cards[bx].found=
+true;
+
+memoryState.found++;
+
+memoryState.open=[];
+
+memoryState.locked=
+false;
+
+updateUser(
+u=>
+u.xp=
+(u.xp||0)+
+50
+);
+
+if(
+memoryState.found===
+memoryState.total
+){
+
+$('memoryResult')
+.textContent=
+'🎉 Você encontrou todos os pares! +200 XP';
+
+}
+
+}
+else{
+
+setTimeout(
+()=>{
+
+[
+$('mc'+a),
+$('mc'+bx)
+]
+.forEach(
+x=>{
+
+x.textContent='?';
+
+x.style.background=
+'var(--soft)';
+
+}
+);
+
+memoryState.open=[];
+
+memoryState.locked=
+false;
+
+},
+650
+);
+
+}
+
+}
+
+}
+
+const defaultTfBank=[
+
+[
+'A água ferve a 100 °C ao nível do mar.',
+true
+],
+
+[
+'O Brasil está localizado na Europa.',
+false
+],
+
+[
+'Uma fração pode representar uma parte de um todo.',
+true
+],
+
+[
+'A Terra é uma estrela.',
+false
+],
+
+[
+'A leitura pode envolver inferências além das informações explícitas.',
+true
+]
+
+];
+
+let tfBank=
+defaultTfBank;
+
 async function startTrueFalse(){
-  const u=JSON.parse(localStorage.inspiredUser||'null');if(!u){openAccount();return}
-  tfIndex=0;tfScore=0;openModal('tfModal');
-  $('tfButtons').style.display='flex';$('tfTitle').textContent='Preparando...';$('tfQuestion').textContent='Gerando afirmações com a IA sobre o que você estudou agora...';$('tfResult').textContent='';
-  const generated=await generateTFStatements(u,5);
-  if(!generated){
-    $('tfTitle').textContent='Sem conteúdo ainda';$('tfButtons').style.display='none';
-    $('tfQuestion').innerHTML=noContentBlock('Não foi possível gerar. Não temos conteúdo recente com o tutor de IA — converse com ele sobre uma matéria e tente de novo.','tfModal');
-    return;
-  }
-  tfBank=generated;
-  loadTF();
+
+const u=
+JSON.parse(
+localStorage.inspiredUser||
+'null'
+);
+
+if(!u){
+
+openAccount();
+
+return;
+
 }
-function loadTF(){$('tfTitle').textContent='Rodada '+(tfIndex+1)+'/5';$('tfQuestion').textContent=tfBank[tfIndex%tfBank.length][0];$('tfResult').textContent=''}
-function answerTF(v){if(v===tfBank[tfIndex%tfBank.length][1]){tfScore++;$('tfResult').textContent='✅ Acertou!'}else{$('tfResult').textContent='❌ Errou!'}setTimeout(()=>{tfIndex++;if(tfIndex>=5){updateUser(u=>{u.xp=(u.xp||0)+tfScore*30;u.questions=(u.questions||0)+5});$('tfResult').textContent='Fim! Você acertou '+tfScore+'/5. +'+(tfScore*30)+' XP';$('tfTitle').textContent='Resultado';$('tfQuestion').textContent='';}else loadTF()},700)}
-async function fetchSchoolsQuery(q,limit=12){
-  const nq=normalizeSchoolName(q);let local=knownSchools.filter(x=>{const n=normalizeSchoolName(x.display_name);return n.includes(nq)||nq.includes('miracatu')||nq.includes('poeta domingos')||nq.includes('bauer leite')||nq.includes('domingos bauer')});
-  local=local.slice(0,limit);
-  try{const url='https://nominatim.openstreetmap.org/search?format=jsonv2&limit='+limit+'&countrycodes=br&q='+encodeURIComponent(q);const r=await fetch(url,{headers:{'Accept-Language':'pt-BR','User-Agent':'InspiRED-estudos/1.0'}});if(!r.ok)throw new Error('HTTP '+r.status);const remote=await r.json();const keys=new Set(local.map(x=>normalizeSchoolName(x.display_name.split(',')[0])));return local.concat(remote.filter(x=>!keys.has(normalizeSchoolName(x.display_name.split(',')[0]))));}catch(e){if(local.length)return local;throw e}
+
+tfIndex=0;
+
+tfScore=0;
+
+openModal(
+'tfModal'
+);
+
+$('tfButtons')
+.style.display=
+'flex';
+
+$('tfTitle')
+.textContent=
+'Preparando...';
+
+$('tfQuestion')
+.textContent=
+'Gerando afirmações com a IA sobre o que você estudou agora...';
+
+$('tfResult')
+.textContent=
+'';
+
+const generated=
+await generateTFStatements(
+u,
+5
+);
+
+if(!generated){
+
+$('tfTitle')
+.textContent=
+'Sem conteúdo ainda';
+
+$('tfButtons')
+.style.display=
+'none';
+
+$('tfQuestion')
+.innerHTML=
+noContentBlock(
+'Não foi possível gerar. Não temos conteúdo recente com o tutor de IA — converse com ele sobre uma matéria e tente de novo.',
+'tfModal'
+);
+
+return;
+
 }
-async function searchSchools(){const q=$('schoolSearch').value.trim();if(!q){toast('Digite o nome da escola.');return}$('schoolResults').innerHTML='<div class="empty" style="padding:22px">Buscando escolas...</div>';try{let data=await fetchSchoolsQuery(q+' escola',12);if(!data.length)data=await fetchSchoolsQuery(q,12);renderSchools(data)}catch(e){$('schoolResults').innerHTML='<div class="empty" style="padding:22px">Não foi possível consultar os mapas agora. Use a busca por região ou informe a escola manualmente.</div>'}}
-async function searchSchoolsByRegion(){const q=$('schoolRegionSearch').value.trim();if(!q){toast('Digite uma região, cidade, bairro ou estado.');return}$('schoolResults').innerHTML='<div class="empty" style="padding:22px">Procurando escolas na região...</div>';try{let data=await fetchSchoolsQuery('escolas em '+q,20);if(!data.length)data=await fetchSchoolsQuery('school '+q,20);renderSchools(data)}catch(e){$('schoolResults').innerHTML='<div class="empty" style="padding:22px">Não foi possível buscar essa região agora.</div>'}}
-async function nearbySchools(){if(!navigator.geolocation){toast('Seu navegador não oferece localização.');return}toast('Pedindo sua localização...');navigator.geolocation.getCurrentPosition(async pos=>{const {latitude,longitude}=pos.coords;$('schoolResults').innerHTML='<div class="empty" style="padding:22px">Procurando escolas próximas...</div>';try{const data=await fetchSchoolsQuery('escola',30);data.forEach(x=>x._distance=distance(latitude,longitude,+x.lat,+x.lon));data.sort((a,b)=>a._distance-b._distance);renderSchools(data)}catch(e){toast('Não foi possível buscar escolas agora. Tente pela região.')}},()=>toast('Permita a localização para procurar escolas próximas.'))}
-function distance(a,b,c,d){const R=6371,rad=x=>x*Math.PI/180;const x=rad(c-a),y=rad(d-b);const h=Math.sin(x/2)**2+Math.cos(rad(a))*Math.cos(rad(c))*Math.sin(y/2)**2;return 2*R*Math.asin(Math.sqrt(h))}
-function renderSchools(data){if(!data.length){$('schoolResults').innerHTML='<div class="empty" style="padding:22px">Nenhuma escola encontrada.</div>';return}$('schoolResults').innerHTML=data.map((x,i)=>`<div class="schoolResult" onclick="selectSchool(${i})"><span class="si">🏫</span><main><b>${escapeHtml(x.display_name.split(',')[0])}</b><small>${escapeHtml(x.display_name.split(',').slice(1,3).join(', '))}</small></main>${x._distance?`<span class="distance">${x._distance.toFixed(1)} km</span>`:''}</div>`).join('');window.schoolData=data}
-function selectSchool(i){const x=window.schoolData[i];const name=x.display_name.split(',')[0].trim();const system=detectTeachingSystem(name);updateUser(u=>{u.school=name;u.system=system});$('schoolTitle').textContent=name;toast('Escola selecionada: '+name+' • '+system);renderCurriculum()}
-function escapeHtml(s){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
-$('themeBtn').onclick=()=>{document.body.classList.toggle('dark');localStorage.theme=document.body.classList.contains('dark')?'dark':'light';$('themeBtn').textContent=document.body.classList.contains('dark')?'☀':'☾'};
-if(localStorage.theme==='dark'){$('themeBtn').textContent='☀';document.body.classList.add('dark')}
-if(localStorage.inspiredUser){try{const u=JSON.parse(localStorage.inspiredUser);if(!u.system)u.system=detectTeachingSystem(u.school);localStorage.inspiredUser=JSON.stringify(u)}catch(e){}showApp();}
-document.querySelectorAll('.overlay').forEach(x=>x.addEventListener('click',e=>{if(e.target===x)x.style.display='none'}));
+
+tfBank=
+generated;
+
+loadTF();
+
+}
+
+function loadTF(){
+
+$('tfTitle')
+.textContent=
+'Rodada '+
+(tfIndex+1)+
+'/5';
+
+$('tfQuestion')
+.textContent=
+tfBank[
+tfIndex%
+tfBank.length
+][0];
+
+$('tfResult')
+.textContent=
+'';
+
+}
+
+function answerTF(v){
+
+if(
+v===
+tfBank[
+tfIndex%
+tfBank.length
+][1]
+){
+
+tfScore++;
+
+$('tfResult')
+.textContent=
+'✅ Acertou!';
+
+}
+else{
+
+$('tfResult')
+.textContent=
+'❌ Errou!';
+
+}
+
+setTimeout(
+()=>{
+
+tfIndex++;
+
+if(
+tfIndex>=5
+){
+
+updateUser(
+u=>{
+
+u.xp=
+(u.xp||0)+
+tfScore*30;
+
+u.questions=
+(u.questions||0)+
+5;
+
+}
+);
+
+$('tfResult')
+.textContent=
+'Fim! Você acertou '+
+tfScore+
+'/5. +'+
+(tfScore*30)+
+' XP';
+
+$('tfTitle')
+.textContent=
+'Resultado';
+
+$('tfQuestion')
+.textContent=
+'';
+
+}
+else{
+
+loadTF();
+
+}
+
+},
+700
+);
+
+}
+
+async function fetchSchoolsQuery(
+q,
+limit=12
+){
+
+const nq=
+normalizeSchoolName(
+q
+);
+
+let local=
+knownSchools.filter(
+x=>{
+
+const n=
+normalizeSchoolName(
+x.display_name
+);
+
+return (
+n.includes(nq)||
+nq.includes('miracatu')||
+nq.includes('poeta domingos')||
+nq.includes('bauer leite')||
+nq.includes('domingos bauer')
+);
+
+}
+);
+
+local=
+local.slice(
+0,
+limit
+);
+
+try{
+
+const url=
+'https://nominatim.openstreetmap.org/search?format=jsonv2&limit='+
+limit+
+'&countrycodes=br&q='+
+encodeURIComponent(q);
+
+const r=
+await fetch(
+url,
+{
+headers:{
+'Accept-Language':
+'pt-BR',
+'User-Agent':
+'InspiRED-estudos/1.0'
+}
+}
+);
+
+if(!r.ok){
+
+throw new Error(
+'HTTP '+
+r.status
+);
+
+}
+
+const remote=
+await r.json();
+
+const keys=
+new Set(
+local.map(
+x=>
+normalizeSchoolName(
+x.display_name
+.split(',')[0]
+)
+)
+);
+
+return local.concat(
+
+remote.filter(
+x=>
+!keys.has(
+normalizeSchoolName(
+x.display_name
+.split(',')[0]
+)
+)
+)
+
+);
+
+}
+catch(e){
+
+if(
+local.length
+){
+return local;
+}
+
+throw e;
+
+}
+
+}
+
+async function searchSchools(){
+
+const q=
+$('schoolSearch')
+.value
+.trim();
+
+if(!q){
+
+toast(
+'Digite o nome da escola.'
+);
+
+return;
+
+}
+
+$('schoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Buscando escolas...</div>';
+
+try{
+
+let data=
+await fetchSchoolsQuery(
+q+' escola',
+12
+);
+
+if(!data.length){
+
+data=
+await fetchSchoolsQuery(
+q,
+12
+);
+
+}
+
+renderSchools(data);
+
+}
+catch(e){
+
+$('schoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Não foi possível consultar os mapas agora. Use a busca por região ou informe a escola manualmente.</div>';
+
+}
+
+}
+
+async function searchSchoolsByRegion(){
+
+const q=
+$('schoolRegionSearch')
+.value
+.trim();
+
+if(!q){
+
+toast(
+'Digite uma região, cidade, bairro ou estado.'
+);
+
+return;
+
+}
+
+$('schoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Procurando escolas na região...</div>';
+
+try{
+
+let data=
+await fetchSchoolsQuery(
+'escolas em '+q,
+20
+);
+
+if(!data.length){
+
+data=
+await fetchSchoolsQuery(
+'school '+q,
+20
+);
+
+}
+
+renderSchools(data);
+
+}
+catch(e){
+
+$('schoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Não foi possível buscar essa região agora.</div>';
+
+}
+
+}
+
+async function nearbySchools(){
+
+if(
+!navigator.geolocation
+){
+
+toast(
+'Seu navegador não oferece localização.'
+);
+
+return;
+
+}
+
+toast(
+'Pedindo sua localização...'
+);
+
+navigator.geolocation
+.getCurrentPosition(
+
+async pos=>{
+
+const {
+latitude,
+longitude
+}=
+pos.coords;
+
+$('schoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Procurando escolas próximas...</div>';
+
+try{
+
+const data=
+await fetchSchoolsQuery(
+'escola',
+30
+);
+
+data.forEach(
+x=>
+x._distance=
+distance(
+latitude,
+longitude,
++x.lat,
++x.lon
+)
+);
+
+data.sort(
+(a,b)=>
+a._distance-
+b._distance
+);
+
+renderSchools(data);
+
+}
+catch(e){
+
+toast(
+'Não foi possível buscar escolas agora. Tente pela região.'
+);
+
+}
+
+},
+
+()=>toast(
+'Permita a localização para procurar escolas próximas.'
+)
+
+);
+
+}
+
+function distance(
+a,
+b,
+c,
+d
+){
+
+const R=
+6371;
+
+const rad=
+x=>
+x*Math.PI/180;
+
+const x=
+rad(
+c-a
+);
+
+const y=
+rad(
+d-b
+);
+
+const h=
+Math.sin(
+x/2
+)**2
++
+Math.cos(
+rad(a)
+)
+*
+Math.cos(
+rad(c)
+)
+*
+Math.sin(
+y/2
+)**2;
+
+return 2*
+R*
+Math.asin(
+Math.sqrt(h)
+);
+
+}
+
+function renderSchools(data){
+
+if(!data.length){
+
+$('schoolResults')
+.innerHTML=
+'<div class="empty" style="padding:22px">Nenhuma escola encontrada.</div>';
+
+return;
+
+}
+
+$('schoolResults')
+.innerHTML=
+data.map(
+(x,i)=>`
+<div
+class="schoolResult"
+onclick="selectSchool(${i})"
+>
+
+<span class="si">
+🏫
+</span>
+
+<main>
+
+<b>
+${escapeHtml(
+x.display_name
+.split(',')[0]
+)}
+</b>
+
+<small>
+${escapeHtml(
+x.display_name
+.split(',')
+.slice(1,3)
+.join(', ')
+)}
+</small>
+
+</main>
+
+${
+x._distance
+?`
+<span class="distance">
+${x._distance.toFixed(1)} km
+</span>
+`
+:''
+}
+
+</div>
+`
+)
+.join('');
+
+window.schoolData=
+data;
+
+}
+
+function selectSchool(i){
+
+const x=
+window.schoolData[i];
+
+const name=
+x.display_name
+.split(',')[0]
+.trim();
+
+const system=
+detectTeachingSystem(
+name
+);
+
+updateUser(
+u=>{
+
+u.school=
+name;
+
+u.system=
+system;
+
+}
+);
+
+$('schoolTitle')
+.textContent=
+name;
+
+toast(
+'Escola selecionada: '+
+name+
+' • '+
+system
+);
+
+renderCurriculum();
+
+}
+
+function escapeHtml(s){
+
+return s.replace(
+/[&<>'"]/g,
+c=>({
+'&':'&amp;',
+'<':'&lt;',
+'>':'&gt;',
+"'":'&#39;',
+'"':'&quot;'
+}[c])
+);
+
+}
+
+$('themeBtn')
+.onclick=
+()=>{
+
+document.body
+.classList.toggle(
+'dark'
+);
+
+localStorage.theme=
+document.body
+.classList.contains(
+'dark'
+)
+?
+'dark'
+:
+'light';
+
+$('themeBtn')
+.textContent=
+document.body
+.classList.contains(
+'dark'
+)
+?
+'☀'
+:
+'☾';
+
+};
+
+if(
+localStorage.theme===
+'dark'
+){
+
+$('themeBtn')
+.textContent=
+'☀';
+
+document.body
+.classList.add(
+'dark'
+);
+
+}
+
+if(
+localStorage.inspiredUser
+){
+
+try{
+
+const u=
+JSON.parse(
+localStorage.inspiredUser
+);
+
+if(!u.system){
+
+u.system=
+detectTeachingSystem(
+u.school
+);
+
+}
+
+localStorage.inspiredUser=
+JSON.stringify(u);
+
+}
+catch(e){}
+
+showApp();
+
+}
+
+document
+.querySelectorAll(
+'.overlay'
+)
+.forEach(
+x=>
+x.addEventListener(
+'click',
+e=>{
+
+if(
+e.target===x
+){
+
+x.style.display=
+'none';
+
+}
+
+}
+)
+);
+
 </script>
+
 </body>
 </html>
